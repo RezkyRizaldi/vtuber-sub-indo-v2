@@ -1,0 +1,42 @@
+@font-face {
+  font-family: product-sans;
+  src: url(../fonts/google_font/product-sans-bold.ttf);
+}
+
+html,
+body {
+  font-family: product-sans, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #2e9fd1;
+}
+
+.jumbotron {
+  padding-top: 7rem;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+section {
+  padding-top: 6rem;
+}
+
+i {
+  color: #2e9fd1;
+}
+
+.jumbotron,
+#gallery,
+.btn,
+footer {
+  background-color: #3fc7f1;
+}
