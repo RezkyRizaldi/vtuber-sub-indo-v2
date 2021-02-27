@@ -1,8 +1,7 @@
 function preventScroll() {
-  setTimeout(function () {
-    document.getElementsByTagName("html")[0].style.overflow = "auto";
-  }, 1500);
+  document.getElementsByTagName("html")[0].style.overflow = "auto";
 }
+
 let mq = window.matchMedia("(max-width: 575.98px)");
 const back = document.getElementById("back");
 
@@ -31,7 +30,7 @@ function changeScrollbar() {
   let y = window.scrollY;
 
   if (mq.matches) {
-    if ((y >= 375 && y <= 745) || (y >= 2750 && y <= 3250)) {
+    if ((y >= 375 && y <= 1750) || (y >= 3600 && y <= 4150)) {
       body.classList.add("white");
       body.classList.remove("blue");
     } else {
@@ -39,7 +38,7 @@ function changeScrollbar() {
       body.classList.remove("white");
     }
   } else {
-    if ((y >= 420 && y <= 1030) || (y >= 1800 && y <= 2650)) {
+    if ((y >= 420 && y <= 1475) || (y >= 2275 && y <= 3150)) {
       body.classList.add("white");
       body.classList.remove("blue");
     } else {

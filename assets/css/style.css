@@ -65,12 +65,13 @@ body {
 .jumbotron,
 #gallery,
 .btn,
-footer {
+footer,
+.modal-header {
   background-color: #3fc7f1;
 }
 
 .navbar {
-  background-color: #2e9fd1;
+  transition: all 0.5s;
 }
 
 .jumbotron {
@@ -91,11 +92,11 @@ textarea {
   resize: none;
 }
 
-footer p a:hover {
+footer p span:hover {
   opacity: 0.8;
 }
 
-footer p a i {
+footer p i {
   color: #2e9fd1;
 }
 
@@ -141,7 +142,8 @@ footer p a i {
   box-shadow: none;
 }
 
-.top:hover i {
+.top:hover i,
+.links {
   color: #2e9fd1;
 }
 
@@ -155,9 +157,23 @@ footer p a i {
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
-.navbar-toggler-icon:focus {
+.navbar-toggler-icon:focus,
+.btn-close:focus {
   outline: none;
   box-shadow: none;
+}
+
+.social {
+  transition: all 0.3s;
+}
+
+.social:hover {
+  transform: scale(1.2);
+}
+
+body.modal-open {
+  overflow: hidden !important;
+  position: fixed;
 }
 
 /* Responsive Breakpoints */
@@ -165,8 +181,16 @@ footer p a i {
   .jumbotron {
     padding-top: 7rem;
   }
+}
 
-  section {
-    padding-top: 0rem;
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.333%);
+  }
+
+  .carousel-inner .carousel-item-left.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.333%);
   }
 }
