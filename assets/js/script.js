@@ -1,3 +1,12 @@
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  dataLayer.push(arguments);
+}
+
+gtag("js", new Date());
+gtag("config", "UA-174222113-1");
+
 function preventScroll() {
   document.getElementsByTagName("html")[0].style.overflow = "auto";
 }
@@ -30,7 +39,7 @@ function changeScrollbar() {
   let y = window.scrollY;
 
   if (mq.matches) {
-    if ((y >= 375 && y <= 1750) || (y >= 3600 && y <= 4150)) {
+    if ((y >= 375 && y <= 1750) || (y >= 2300 && y <= 3000)) {
       body.classList.add("white");
       body.classList.remove("blue");
     } else {
@@ -38,7 +47,7 @@ function changeScrollbar() {
       body.classList.remove("white");
     }
   } else {
-    if ((y >= 420 && y <= 1475) || (y >= 2275 && y <= 3150)) {
+    if ((y >= 420 && y <= 1475) || (y >= 2175 && y <= 3050)) {
       body.classList.add("white");
       body.classList.remove("blue");
     } else {

@@ -2,11 +2,13 @@ $(window).on("load", function () {
   $("#loader").fadeOut(1500, "linear");
 });
 
-$(".nav-item .nav-link").on("click", function () {
-  $(".navbar-toggle").addClass("collapsed");
-  $(".navbar-collapse").removeClass("collapsed");
-  $(".navbar-collapse").removeClass("show");
-  $(".navbar-collapse").addClass("collapse");
+$(document).on("ready", function () {
+  $(".nav-item .nav-link").on("click", function () {
+    $(".navbar-toggle").addClass("collapsed");
+    $(".navbar-collapse").removeClass("collapsed");
+    $(".navbar-collapse").removeClass("show");
+    $(".navbar-collapse").addClass("collapse");
+  });
 });
 
 // $(".nav-item .nav-link").on("click", function () {
@@ -14,7 +16,7 @@ $(".nav-item .nav-link").on("click", function () {
 //   $(this).addClass("active");
 // });
 
-$(document).scroll(function () {
+$(document).on("scroll", function () {
   var y = $(this).scrollTop();
   if (y > 175) {
     $(".navbar").css("background-color", "#2e9fd1");
@@ -25,7 +27,7 @@ $(document).scroll(function () {
   }
 });
 
-$(window).scroll(function () {
+$(window).on("scroll", function () {
   if ($(this).scrollTop() < $('section[data-anchor="home"]').offset().top) {
     $(".navbar-nav li a").removeClass("active");
   }

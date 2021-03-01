@@ -3,10 +3,25 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, Bootstrap 5" />
-    <meta name="description" content="Testing Make Website with Bootstrap 5 Beta 2" />
-    <meta name="author" content="Muhamad Rezky Rizaldi" />
+    <meta property="og:keywords" content="HTML, CSS, JavaScript, Bootstrap, Bootstrap 5, Vtuber Sub Indo, Virtual Youtuber, Vtuber" />
+    <meta property="og:image" content="assets/images/brand.jpg" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:title" content="Vtuber Sub Indo" />
+    <meta property="og:description" content="Testing Make Website with Bootstrap 5 Beta 2" />
+    <meta property="og:author" content="Muhamad Rezky Rizaldi" />
+    <meta property="og:url" content="https://rezkyrizaldi.herokuapp.com" />
+    <meta property="og:site_name" content="Vtuber Sub Indo" />
+    <meta property="og:type" content="website" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rezkyrizaldi.herokuapp.com" />
+    <meta property="twitter:title" content="Vtuber Sub Indo" />
+    <meta
+      property="twitter:description"
+      content="Vtuber Sub Indo adalah sebuah komunitas Clipper yang mewadahi para Clipper Vtuber. Tujuan Vtuber Sub Indo yaitu menjadi garda terdepan Channel Clip Vtuber ber-subititle Indonesia untuk menarik para penonton masuk ke lubang
+    hitam yang sama seperti kita saat ini."
+    />
+    <meta property="twitter:image" content="assets/images/brand.jpg" />
     <link rel="icon" href="favicon.ico" type="x-icon" />
 
     <!-- Bootstrap CSS -->
@@ -30,11 +45,11 @@
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
           <a class="navbar-brand d-none d-sm-block" href="#" title="Vtuber Sub Indo">
-            <img src="assets/img/icon/icon.png" alt="Vtuber Sub Indo Logo" width="30" />
+            <img src="assets/images/icon/icon.png" alt="Vtuber Sub Indo Logo" width="30" />
             Vtuber Sub Indo
           </a>
           <a class="navbar-brand d-block d-sm-none m-auto ps-5" href="#" title="Vtuber Sub Indo">
-            <img src="assets/img/icon/icon.png" alt="Vtuber Sub Indo Logo" width="30" />
+            <img src="assets/images/icon/icon.png" alt="Vtuber Sub Indo Logo" width="30" />
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,9 +76,9 @@
 
       <!-- Jumbtotron -->
       <section data-anchor="home" class="jumbotron text-center text-white">
-        <img src="assets/img/icon/icon.png" alt="Vtuber Sub Indo Logo" width="200" class="mb-3" />
-        <h1 class="display-4">Vtuber Sub Indo</h1>
-        <p class="lead">Clippers Community | Vtuber Enthusiasts</p>
+        <img src="assets/images/icon/icon.png" alt="Vtuber Sub Indo Logo" width="200" class="mb-3" />
+        <h1 class="display-4 text-capitalize">Vtuber Sub Indo</h1>
+        <p class="lead text-capitalize">Clippers Community | Vtuber Enthusiasts</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#ffffff"
@@ -89,8 +104,8 @@
                 hitam yang sama seperti kita saat ini.
               </p>
             </div>
-            <div class="col-md-6">
-              <p class="align-middle mb-3"><img src="assets/img/icon/discord.png" alt="Discord Logo" width="50" height="50" /> Discord Server</p>
+            <div class="col-12 col-md-6">
+              <p class="align-middle mb-3"><img src="assets/images/icon/discord.png" alt="Discord Logo" width="50" height="50" /> Discord Server</p>
               <div class="embed-responsive embed-responsive-21by9 embed-responsive-16by9 embed-responsive-4by3 embed-responsive-1by1">
                 <iframe
                   class="embed-responsive-item"
@@ -103,8 +118,8 @@
                 ></iframe>
               </div>
             </div>
-            <div class="col-md-6">
-              <p class="align-middle mb-3 pt-3 pt-md-0"><img src="assets/img/icon/twitter.png" alt="Twitter Logo" width="50" height="50" /> Twitter Timeline</p>
+            <div class="col-12 col-md-6">
+              <p class="align-middle mb-3 pt-3 pt-md-0"><img src="assets/images/icon/twitter.png" alt="Twitter Logo" width="50" height="50" /> Twitter Timeline</p>
               <div class="embed-responsive embed-responsive-21by9 embed-responsive-16by9 embed-responsive-4by3 embed-responsive-1by1">
                 <a class="twitter-timeline embed-responsive-item" data-lang="en" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/VtuberSubIndo?ref_src=twsrc%5Etfw"></a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -124,7 +139,7 @@
 
       <!-- Gallery Section -->
       <section data-anchor="gallery" id="gallery">
-        <div class="container pe-5 ps-5">
+        <div class="container pe-5 ps-5 pe-md-0 ps-md-0">
           <div class="row mb-5 text-center text-white">
             <div class="col">
               <h2 class="pt-3 pt-md-0">Gallery</h2>
@@ -132,11 +147,11 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6">
-              <div id="recipeCarousel" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-                <div class="carousel-inner" style="width: 100%">
+              <div id="contentCarousel" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <div class="card">
-                      <img src="assets/img/content/Membership1.png" alt="Content 1" class="card-img-top" style="width: 100%" />
+                    <div class="card rounded-3 bg-body border-0">
+                      <img src="assets/images/content/Membership1.png" alt="Content 1" class="card-img-top" />
                       <div class="card-body">
                         <h5 class="card-title">Sakura Miko</h5>
                         <p class="card-text text-truncate">The Elite Shrine Maiden from Hololive Production</p>
@@ -145,8 +160,8 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card">
-                      <img src="assets/img/content/Membership2.png" alt="Content 2" class="card-img-top" style="width: 100%" />
+                    <div class="card rounded-3 bg-body border-0">
+                      <img src="assets/images/content/Membership2.png" alt="Content 2" class="card-img-top" />
                       <div class="card-body">
                         <h5 class="card-title">Sakura Miko</h5>
                         <p class="card-text text-truncate">The Elite Shrine Maiden from Hololive Production</p>
@@ -155,8 +170,8 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card">
-                      <img src="assets/img/content/Membership3.png" alt="Content 3" class="card-img-top" style="width: 100%" />
+                    <div class="card rounded-3 bg-body border-0">
+                      <img src="assets/images/content/Membership3.png" alt="Content 3" class="card-img-top" />
                       <div class="card-body">
                         <h5 class="card-title">Sakura Miko</h5>
                         <p class="card-text text-truncate">The Elite Shrine Maiden from Hololive Production</p>
@@ -165,8 +180,8 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card">
-                      <img src="assets/img/content/Membership4.png" alt="Content 4" class="card-img-top" style="width: 100%" />
+                    <div class="card rounded-3 bg-body border-0">
+                      <img src="assets/images/content/Membership4.png" alt="Content 4" class="card-img-top" />
                       <div class="card-body">
                         <h5 class="card-title">Sakura Miko</h5>
                         <p class="card-text text-truncate">The Elite Shrine Maiden from Hololive Production</p>
@@ -175,8 +190,8 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card">
-                      <img src="assets/img/content/Membership5.png" alt="Content 5" class="card-img-top" style="width: 100%" />
+                    <div class="card rounded-3 bg-body border-0">
+                      <img src="assets/images/content/Membership5.png" alt="Content 5" class="card-img-top" />
                       <div class="card-body">
                         <h5 class="card-title">Sakura Miko</h5>
                         <p class="card-text text-truncate">The Elite Shrine Maiden from Hololive Production</p>
@@ -185,8 +200,8 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="card">
-                      <img src="assets/img/content/miko_radio.png" alt="Content 6" class="card-img-top" style="width: 100%" />
+                    <div class="card rounded-3 bg-body border-0">
+                      <img src="assets/images/content/miko_radio.png" alt="Content 6" class="card-img-top" />
                       <div class="card-body">
                         <h5 class="card-title">Sakura Miko</h5>
                         <p class="card-text text-truncate">The Elite Shrine Maiden from Hololive Production</p>
@@ -195,12 +210,12 @@
                     </div>
                   </div>
                 </div>
-                <button class="carousel-control-prev" data-bs-target="#recipeCarousel" type="button" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <button class="carousel-control-prev" type="button">
+                  <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true" data-bs-target="#contentCarousel" data-bs-slide="prev"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" data-bs-target="#recipeCarousel" type="button" data-bs-slide="next">
-                  <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <button class="carousel-control-next" type="button">
+                  <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true" data-bs-target="#contentCarousel" data-bs-slide="next"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
@@ -241,6 +256,31 @@
                 <label for="message" class="form-label">Pesan</label>
                 <textarea class="form-control" id="message" rows="3" placeholder="Tulis Pesan" data-bs-toggle="tooltip" data-bs-placement="top" title="Harap diisi"></textarea>
               </div>
+              <div class="mb-3">
+                <div class="g-recaptcha" data-sitekey="6LfemLsZAAAAAIKitf7srENDko3KFbuEwMyw9_R2">
+                  <div style="width: 304px; height: 78px">
+                    <div>
+                      <iframe
+                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfemLsZAAAAAIKitf7srENDko3KFbuEwMyw9_R2&amp;co=aHR0cHM6Ly9oYXJ1bm96dWthLmlkOjQ0Mw..&amp;hl=en&amp;v=jxFQ7RQ9s9HTGKeWcoa6UQdD&amp;size=normal&amp;cb=hi6lmepctk7c"
+                        width="304"
+                        height="78"
+                        role="presentation"
+                        name="a-fekub1qv2b0s"
+                        frameborder="0"
+                        scrolling="no"
+                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                      ></iframe>
+                    </div>
+                    <textarea
+                      id="g-recaptcha-response"
+                      name="g-recaptcha-response"
+                      class="g-recaptcha-response"
+                      style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none"
+                    ></textarea>
+                  </div>
+                  <iframe style="display: none"></iframe>
+                </div>
+              </div>
               <button type="submit" class="btn text-white" title="Send Message">Kirim</button>
             </form>
           </div>
@@ -260,9 +300,9 @@
         <div class="row justify-content-around mb-5 pt-3 pt-md-0">
           <div class="col-md-8">
             <div class="d-flex justify-content-evenly">
-              <a class="social" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/VtuberSubIndo"><img src="assets/img/icon/facebook.png" alt="Facebook Logo" title="Facebook Fanpage" width="50" height="50" /></a>
-              <a class="social" rel="noopener noreferrer" target="_blank" href="https://instagram.com/vtubersubindo"><img src="assets/img/icon/instagram.png" alt="Instagram Logo" title="Instagram" width="50" height="50" /></a>
-              <a class="social" rel="noopener noreferrer" target="_blank" href="https://youtube.com/c/VtuberSubIndo"><img src="assets/img/icon/youtube.png" alt="YouTube Logo" title="YouTube" width="50" height="50" /></a>
+              <a class="social" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/VtuberSubIndo"><img src="assets/images/icon/facebook.png" alt="Facebook Logo" title="Facebook Fanpage" width="50" height="50" /></a>
+              <a class="social" rel="noopener noreferrer" target="_blank" href="https://instagram.com/vtubersubindo"><img src="assets/images/icon/instagram.png" alt="Instagram Logo" title="Instagram" width="50" height="50" /></a>
+              <a class="social" rel="noopener noreferrer" target="_blank" href="https://youtube.com/c/VtuberSubIndo"><img src="assets/images/icon/youtube.png" alt="YouTube Logo" title="YouTube" width="50" height="50" /></a>
             </div>
           </div>
         </div>
@@ -286,16 +326,16 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title text-white" id="myModalLabel">Details</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" data-bs-target="gallery"></button>
             </div>
             <div class="modal-body">
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-md-12">
                     <p>
-                      Sakura Miko (さくらみこ, Kanji: 桜巫女, Hanzi:樱巫女) adalah seorang Virtual YouTuber perempuan asal Jeoang dan merupakan salah satu anggota di hololive Production. ia memulai debut seorang diri jauh sebelum para
-                      member Gen bergabung dan sekaligus bekerja langsung di bawah naungan Cover Corp. Sebelum dipindahkah ke hololive, dia adalah bagian dari "hololive Gen 0" bersamaan dengan Solo Debuters lainnya: Tokino Sora, Roboco,
-                      Hoshimachi Suisei dan AZKi.
+                      Sakura Miko (さくらみこ, Kanji: 桜巫女, Hanzi: 樱巫女) adalah seorang Virtual YouTuber asal Jepang dan merupakan salah satu anggota di hololive Production. ia memulai debut seorang diri jauh sebelum para member Gen
+                      bergabung dan sekaligus bekerja langsung di bawah naungan Cover Corp. Sebelum dipindahkah ke hololive, dia adalah bagian dari "hololive Gen 0" bersamaan dengan Solo Debuters lainnya: Tokino Sora, Roboco, Hoshimachi
+                      Suisei dan AZKi.
                     </p>
                   </div>
                   <div class="row">
@@ -304,7 +344,7 @@
                         <div class="col-md-4">
                           <h2>Basic Information</h2>
                           <ul class="list-group list-group-flush">
-                            <li class="list-group-item list-group-item-action">- Nama Original: さくらみこ</li>
+                            <li class="list-group-item list-group-item-action">- Original Name: さくらみこ</li>
                             <li class="list-group-item list-group-item-action">- Nickname: Miko-chi, Elite Miko, sakuramiko35 (usual in-game username)</li>
                             <li class="list-group-item list-group-item-action">- Catchphrase: にゃっはろ！(NyaHello!)</li>
                             <li class="list-group-item list-group-item-action">- Tanggal Debut YouTube: 2018/08/01</li>
@@ -326,16 +366,21 @@
                               <h2>Media</h2>
                               <ul class="list-group list-group-flush">
                                 <li class="list-group-item list-group-item-action">
-                                  - Channel YouTube: <a class="links text-decoration-none" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UC-hM6YJuNYVAmUWxeIr9FeA">Miko Ch. さくらみこ</a>
+                                  - YouTube: <a class="links text-decoration-none" title="Miko Ch. さくらみこ" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UC-hM6YJuNYVAmUWxeIr9FeA">Miko Ch. さくらみこ</a>
                                 </li>
                                 <li class="list-group-item list-group-item-action">
-                                  - Twitch: <a class="links text-decoration-none" target="_blank" rel="noopener noreferrer" href="https://twitch.tv/sakuramiko_hololive">sakuramiko_hololive</a>
+                                  - Twitch: <a class="links text-decoration-none" title="sakuramiko_hololive" target="_blank" rel="noopener noreferrer" href="https://twitch.tv/sakuramiko_hololive">sakuramiko_hololive</a>
                                 </li>
-                                <li class="list-group-item list-group-item-action">- Twitter: <a class="links text-decoration-none" target="_blank" rel="noopener noreferrer" href="https://twitter.com/sakuramiko35">@sakuramiko35</a></li>
-                                <li class="list-group-item list-group-item-action">- bilibili: <a class="links text-decoration-none" target="_blank" rel="noopener noreferrer" href="https://space.bilibili.com/366690056/">さくらみこ</a></li>
                                 <li class="list-group-item list-group-item-action">
-                                  - Website: <a class="links text-decoration-none" target="_blank" rel="noopener noreferrer" href="https://www.hololive.tv/portfolio/items/336371">hololive.tv (Japanese)</a> |
-                                  <a class="links text-decoration-none" target="_blank" rel="noopener noreferrer" href="https://en.hololive.tv/portfolio/items/433578">hololive.tv (English)</a>
+                                  - Twitter: <a class="links text-decoration-none" title="@sakuramiko35" target="_blank" rel="noopener noreferrer" href="https://twitter.com/sakuramiko35">@sakuramiko35</a>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  - bilibili: <a class="links text-decoration-none" title="さくらみこ" target="_blank" rel="noopener noreferrer" href="https://space.bilibili.com/366690056/">さくらみこ</a>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  - Website:
+                                  <a class="links text-decoration-none" title="hololive Official Website" target="_blank" rel="noopener noreferrer" href="https://www.hololive.tv/portfolio/items/336371">hololive.tv (Japanese)</a> |
+                                  <a class="links text-decoration-none" title="hololive Official Website" target="_blank" rel="noopener noreferrer" href="https://en.hololive.tv/portfolio/items/433578">hololive.tv (English)</a>
                                 </li>
                               </ul>
                             </div>
@@ -352,8 +397,8 @@
                             </div>
                             <div class="col-md-12 mt-3">
                               <h2>Introduction Video</h2>
-                              <div class="ratio ratio-21x9 ratio-16x9 ratio-4x3 ratio-1x1">
-                                <iframe src="https://www.youtube.com/embed/lMPhHXJbPEQ?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                              <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                                <iframe class="embed-item-responsive" src="https://www.youtube.com/embed/lMPhHXJbPEQ?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
                               </div>
                             </div>
                           </div>
@@ -362,7 +407,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mt-3 mt-md-0">
                   <div class="col-md-12">
                     <h2>Personality</h2>
                     <p>
@@ -488,7 +533,7 @@
                         </p>
                       </div>
                       <div class="col-md-2">
-                        <img class="img-thumbnail rounded-circle" src="assets/img/icon/Sakura_Miko-35P_Emoji.png" alt="35P Emoji" width="200" height="200" />
+                        <img class="img-thumbnail rounded-circle" src="assets/images/icon/Sakura_Miko-35P_Emoji.png" alt="35P Emoji" width="200" height="200" />
                       </div>
                     </div>
                   </div>
@@ -496,7 +541,11 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn text-white" data-bs-dismiss="modal">Gitu, ya.</button>
+              <small class="text-muted me-auto"
+                >Fetching from
+                <a rel="noopener noreferrer" target="_blank" class="text-decoration-none" href="https://virtualyoutuber.fandom.com/wiki/Sakura_Miko" title="WikiFandom">WikiFandom</a>
+              </small>
+              <button type="button" class="btn text-white" data-bs-dismiss="modal" data-bs-target="gallery">Gitu, ya.</button>
             </div>
           </div>
         </div>
@@ -511,13 +560,24 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-    <!-- MyJQuery -->
-    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <!-- Google -->
+    <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
+    <script
+      type="text/javascript"
+      async
+      src="https://www.gstatic.com/recaptcha/releases/jxFQ7RQ9s9HTGKeWcoa6UQdD/recaptcha__en.js"
+      crossorigin="anonymous"
+      integrity="sha384-M9863pj8VTkCmdbfuuaGvQUaNXo72mc4KbfOtDfVBjv+zjrQy0vx5uzX9BsGSepE"
+    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174222113-1"></script>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- My JavaScript -->
     <script type="text/javascript" src="assets/js/script.js"></script>
+
+    <!-- MyJQuery -->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
   </body>
 </html>
