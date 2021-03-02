@@ -1,3 +1,11 @@
+body {
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+}
+
 @font-face {
   font-family: product-sans;
   src: url(../fonts/google_font/product-sans-bold.ttf);
@@ -162,8 +170,10 @@ footer p {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  -webkit-animation: floatAfter 6s ease-in-out infinite, spinAfter 6s linear infinite, randomAfter 25s linear 10s infinite alternate;
-  animation: floatAfter 6s ease-in-out infinite, spinAfter 6s linear infinite, randomAfter 25s linear 10s infinite alternate;
+  -webkit-animation: floatAfter 6s ease-in-out infinite,
+    spinAfter 6s linear infinite, randomAfter 25s linear 10s infinite alternate;
+  animation: floatAfter 6s ease-in-out infinite, spinAfter 6s linear infinite,
+    randomAfter 25s linear 10s infinite alternate;
 }
 
 .jumbotron::after,
@@ -254,8 +264,10 @@ footer p {
   -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   -o-transform: rotate(135deg);
-  -webkit-animation: floatBefore 6s ease-in-out infinite, spinBefore 6s linear infinite, randomBefore 25s linear 5s infinite alternate;
-  animation: floatBefore 6s ease-in-out infinite, spinBefore 6s linear infinite, randomBefore 25s linear 5s infinite alternate;
+  -webkit-animation: floatBefore 6s ease-in-out infinite,
+    spinBefore 6s linear infinite, randomBefore 25s linear 5s infinite alternate;
+  animation: floatBefore 6s ease-in-out infinite, spinBefore 6s linear infinite,
+    randomBefore 25s linear 5s infinite alternate;
 }
 
 .jumbotron::before,
@@ -374,7 +386,8 @@ section {
 
 .form-control:focus {
   border-color: #3fc7f1;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(63, 199, 241, 0.7);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(63, 199, 241, 0.7);
   outline: 0 none;
 }
 
@@ -451,6 +464,7 @@ footer p i {
   right: 30px;
 }
 
+.form-check-input:focus,
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus,
@@ -479,7 +493,33 @@ body.modal-open {
   position: fixed;
 }
 
+.center {
+  padding-left: 215px;
+}
+
+svg path.svg_white {
+  transition: fill 0.7s;
+  -webkit-transition: fill 0.7s;
+  -moz-transition: fill 0.7s;
+  -ms-transition: fill 0.7s;
+  -o-transition: fill 0.7s;
+}
+
+svg path.svg_blue {
+  transition: fill 0.7s;
+  -webkit-transition: fill 0.7s;
+  -moz-transition: fill 0.7s;
+  -ms-transition: fill 0.7s;
+  -o-transition: fill 0.7s;
+}
+
 /* Responsive Breakpoints */
+@media screen and (max-width: 991.98px) {
+  .center {
+    padding-left: 0;
+  }
+}
+
 @media screen and (max-width: 767.98px) {
   .navbar {
     background-color: #2e9fd1 !important;
