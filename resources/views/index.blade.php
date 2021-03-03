@@ -95,39 +95,37 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
     <link rel="author" href="https://rezkyrizaldi.herokuapp.com" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-
-    <!-- Bootstrap Icons -->
+    {{--  Bootstrap CSS  --}}
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+      href="{{ asset('assets/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css') }}"
     />
 
-    <!-- Swiper CSS -->
+    {{--  Bootstrap Icons  --}}
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="{{ asset('assets/bootstrap-icons-1.4.0/bootstrap-icons.css') }}"
     />
 
-    <!-- My CSS -->
+    {{--  Swiper CSS  --}}
+    <link
+      rel="stylesheet"
+      href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+    </link>
+
+    {{--  My CSS  --}}
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/dark-mode.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/swiper.css') }}" />
     <title>Vtuber Sub Indo</title>
   </head>
   <body id="body" ondragstart="return false;">
-    <!-- Loader -->
+    {{--  Loader  --}}
     <div id="loader"></div>
 
-    <!-- Page -->
+    {{--  Page  --}}
     <div id="page">
-      <!-- Navbar -->
+      {{--  Navbar  --}}
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
           <div class="d-flex">
@@ -216,9 +214,9 @@
           </div>
         </div>
       </nav>
-      <!-- End Navbar -->
+      {{--  End Navbar  --}}
 
-      <!-- Jumbtotron -->
+      {{--  Jumbotron  --}}
       <section data-anchor="home" class="jumbotron text-center text-light">
         <img
           src="{{ asset('assets/images/icon/icon.png') }}"
@@ -239,9 +237,9 @@
           ></path>
         </svg>
       </section>
-      <!-- End Jumbtotron -->
+      {{--  End Jumbotron  --}}
 
-      <!-- About Section -->
+      {{--  About Section  --}}
       <section data-anchor="about" id="about">
         <div class="container">
           <div class="row mb-3 text-center">
@@ -322,9 +320,9 @@
           ></path>
         </svg>
       </section>
-      <!-- End About Section -->
+     {{-- End About Section --}}
 
-      <!-- Gallery Section -->
+      {{--  Gallery Section  --}}
       <section data-anchor="gallery" id="gallery">
         <div class="container pe-5 ps-5 pe-md-0 ps-md-0">
           <div class="row mb-5 text-center text-light">
@@ -630,15 +628,12 @@
                     </div>
                   </div>
                 </div>
-                <!-- If we need pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
+                {{--  <div class="swiper-pagination"></div>  --}}
 
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
 
-                <!-- If we need scrollbar -->
-                <!-- <div class="swiper-scrollbar"></div> -->
+                {{--  <div class="swiper-scrollbar"></div>  --}}
               </div>
             </div>
           </div>
@@ -652,9 +647,9 @@
           ></path>
         </svg>
       </section>
-      <!-- End Gallery Section -->
+      {{--  End Gallery Section  --}}
 
-      <!-- Contact Us Section -->
+      {{--  Contact Us Section  --}}
       <section data-anchor="contact" id="contact">
         <div class="row mb-5 text-center">
           <div class="col">
@@ -763,9 +758,9 @@
           ></path>
         </svg>
       </section>
-      <!-- End Contact Us Section -->
+      {{--  End Contact Us Section  --}}
 
-      <!-- Footer -->
+      {{--  Footer  --}}
       <footer class="pb-3 text-center text-light">
         <div class="row justify-content-around mb-5 pt-3 pt-md-0">
           <div class="col-md-8">
@@ -822,9 +817,9 @@
           </div>
         </div>
       </footer>
-      <!-- End Footer -->
+      {{--  End Footer  --}}
 
-      <!-- Modals -->
+      {{--  Modal  --}}
       <div
         class="modal fade"
         id="myModal"
@@ -1379,9 +1374,9 @@
           </div>
         </div>
       </div>
-      <!-- End Modals -->
+      {{--  End Modal  --}}
 
-      <!-- Back to Top -->
+      {{--  Back to Top  --}}
       <a
         href="#page"
         id="back"
@@ -1391,15 +1386,15 @@
         ><i class="bi bi-arrow-up-circle-fill"></i
       ></a>
     </div>
-    <!-- End Page -->
+    {{--  End Page  --}}
 
-    <!-- JQuery -->
+    {{--  JQuery  --}}
     <script
       type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+      src="{{ asset('assets/js/jquery.min.js') }}"
     ></script>
 
-    <!-- Google -->
+    {{--  Google  --}}
     <script
       type="text/javascript"
       async
@@ -1418,21 +1413,19 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-174222113-1"
     ></script>
 
-    <!-- Bootstrap JavaScript -->
+    {{--  Bootstrap JavaScript  --}}
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-      crossorigin="anonymous"
+      src="{{ asset('assets/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js') }}"
     ></script>
 
-    <!-- Swiper JavaScript -->
+    {{--  Swiper JavaScript  --}}
     <script
       type="text/javascript"
-      src="https://unpkg.com/swiper/swiper-bundle.min.js"
-    ></script>
+      src="{{ asset('assets/js/swiper-bundle.min.js') }}">
+    </script>
 
-    <!-- My JavaScript -->
+    {{--  My JavaScript  --}}
     <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/swiper.js') }}"></script>
     <script
