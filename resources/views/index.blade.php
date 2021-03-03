@@ -1,43 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" translate="no">
   <head>
-    <!-- Required meta tags -->
+    {{-- Required Meta Tags --}}
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no"
     />
+
+		{{-- Primary --}}
+		<meta name="title" content="Vtuber Sub Indo" />
     <meta
       name="description"
       content="Vtuber Sub Indo adalah sebuah komunitas Clipper yang mewadahi para Clipper Vtuber. Tujuan dari Vtuber Sub Indo yaitu menjadi garda terdepan Channel Clip Vtuber ber-subtitle Indonesia untuk menarik para penonton masuk ke lubang hitam yang sama seperti kita saat ini."
     />
-    <meta name="google" content="notranslate" />
-    <meta
-      property="og:keywords"
-      content="HTML, CSS, JavaScript, Bootstrap, Bootstrap 5, Vtuber Sub Indo, Virtual Youtuber, Vtuber"
-    />
-    <meta property="og:image" content="assets/images/brand.jpg" />
-    <meta property="og:image:type" content="image/jpg" />
+		<meta name="copyright" content="Muhamad Rezky Rizaldi" />
+		<meta name="language" content="en" />
+		<meta name="robots" content="index, follow" />
+		<meta name="revised" content="Thursday, March 4th, 2021, 0:16 AM" />
+		<meta name="abstract" content />
+		<meta name="topic" content="Clipper Vtuber" />
+		<meta name="summary" content="Clipper Community" />
+		<meta name="classification" content="Business" />
+		<meta name="author" content="Muhamad Rezky Rizaldi, rezkyrizaldi30@gmail.com">
+		<meta name="designer" content="Muhamad Rezky Rizaldi, rezkyrizaldi30@gmail.com">
+		<meta name="category" content="Official Website" />
+		<meta name="owner" content="Vtuber Sub Indo" />
+		<meta name="coverage" content="Worldwide" />
+		<meta name="distribution" content="Global" />
+		<meta name="rating" content="General" />
+
+    {{-- Open Graph/Facebook --}}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vsi.hadatmtch.net" />
     <meta property="og:title" content="Vtuber Sub Indo" />
-    <meta
+		<meta property="og:image" content="{{ asset('assets/images/brand.jpg') }}" />
+		<meta
       property="og:description"
       content="Vtuber Sub Indo adalah sebuah komunitas Clipper yang mewadahi para Clipper Vtuber. Tujuan Vtuber Sub Indo yaitu menjadi garda terdepan Channel Clip Vtuber ber-subtitle Indonesia untuk menarik penonton masuk ke lubang hitam yang sama seperti kita saat ini."
     />
+		<meta
+      property="og:keywords"
+      content="HTML, CSS, JavaScript, Bootstrap, Bootstrap 5, Vtuber Sub Indo, Virtual Youtuber, Vtuber"
+    />
+		<meta property="og:region" content="ID" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:country-property" content="ID" />
+		<meta property="og:email" content="vtubersubindo@gmail.com" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:alt" content="Vtuber Sub Indo" />
     <meta property="og:author" content="Muhamad Rezky Rizaldi" />
-    <meta property="og:url" content="https://vtubersubindo.herokuapp.com" />
     <meta property="og:site_name" content="Vtuber Sub Indo" />
-    <meta property="og:type" content="website" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://vtubersubindo.herokuapp.com" />
+
+		{{-- Twitter --}}
+		<meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://vsi.hadatmtch.net" />
     <meta property="twitter:title" content="Vtuber Sub Indo" />
     <meta
       property="twitter:description"
       content="Vtuber Sub Indo adalah sebuah komunitas Clipper yang mewadahi para Clipper Vtuber. Tujuan Vtuber Sub Indo yaitu menjadi garda terdepan Channel Clip Vtuber ber-subititle Indonesia untuk menarik para penonton masuk ke lubang
     hitam yang sama seperti kita saat ini."
     />
-    <meta property="twitter:image" content="assets/images/brand.jpg" />
-    <link rel="icon" href="favicon.ico" type="x-icon" />
+    <meta property="twitter:image" content="{{ asset('assets/images/brand.jpg') }}" />
+
+		{{-- Google --}}
+		<meta name="google" content="notranslate" />
+
+		{{-- Apple Meta --}}
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-moblie-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=320, initial-scale=2.3, user-scalable=no" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="initial-scale=1.0" />
+		<meta name="viewport" content="initial-scale=2.3, user-scalable=no" />
+		<link rel="apple-touch-icon" href="favicon.ico" type="image/x-icon" />
+
+		{{-- IE --}}
+		<meta http-equiv="Page-Enter" content="RevealTrans(Duration=2.0, Transition=2)" />
+		<meta http-equiv="Page-Exit" content="RevealTrans(Duration=3.0, Transition=12)" />
+		<meta name="mssmarttagspreventparsing" content="true" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<meta name="msapplication-starturl" content="https://vsi.hadatmtch.net/" />
+		<meta name="msapplication-window" content="width=800;height=600" />
+		<meta name="msapplication-navbutton-color" content="blue" />
+		<meta name="application-name" content="Vtuber Sub Indo" />
+		<meta name="msappliaction-tooltip" content="Vtuber Sub Indo" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+		{{-- HTML --}}
+		<link rel="fluid-icon" href="{{ asset('assets/images/logo.png') }}" type="image/png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
     <link rel="author" href="https://rezkyrizaldi.herokuapp.com" />
 
     <!-- Bootstrap CSS -->
@@ -61,9 +116,9 @@
     />
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/dark-mode.css" />
-    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/dark-mode.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper.css') }}" />
     <title>Vtuber Sub Indo</title>
   </head>
   <body id="body" ondragstart="return false;">
@@ -86,7 +141,7 @@
             title="Vtuber Sub Indo"
           >
             <img
-              src="assets/images/icon/icon.png"
+              src="{{ asset('assets/images/icon/icon.png') }}"
               alt="Vtuber Sub Indo Logo"
               width="30"
             />
@@ -98,7 +153,7 @@
             title="Vtuber Sub Indo"
           >
             <img
-              src="assets/images/icon/icon.png"
+              src="{{ asset('assets/images/icon/icon.png') }}"
               alt="Vtuber Sub Indo Logo"
               width="30"
             />
@@ -166,7 +221,7 @@
       <!-- Jumbtotron -->
       <section data-anchor="home" class="jumbotron text-center text-light">
         <img
-          src="assets/images/icon/icon.png"
+          src="{{ asset('assets/images/icon/icon.png') }}"
           alt="Vtuber Sub Indo Logo"
           width="200"
           class="mb-3"
@@ -207,7 +262,7 @@
             <div class="col-12 col-md-6">
               <p class="align-middle mb-3">
                 <img
-                  src="assets/images/icon/discord.png"
+                  src="{{ asset('assets/images/icon/discord.png') }}"
                   alt="Discord Logo"
                   width="50"
                   height="50"
@@ -231,7 +286,7 @@
             <div class="col-12 col-md-6">
               <p class="align-middle mb-3 pt-3 pt-md-0">
                 <img
-                  src="assets/images/icon/twitter.png"
+                  src="{{ asset('assets/images/icon/twitter.png') }}"
                   alt="Twitter Logo"
                   width="50"
                   height="50"
@@ -289,7 +344,7 @@
                   <div class="carousel-item active">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership1.png"
+                        src="{{ asset('assets/images/content/Membership1.png') }}"
                         alt="Content 1"
                         class="card-img-top"
                       />
@@ -311,7 +366,7 @@
                   <div class="carousel-item">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership2.png"
+                        src="{{ asset('assets/images/content/Membership2.png') }}"
                         alt="Content 2"
                         class="card-img-top"
                       />
@@ -333,7 +388,7 @@
                   <div class="carousel-item">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership3.png"
+                        src="{{ asset('assets/images/content/Membership3.png') }}"
                         alt="Content 3"
                         class="card-img-top"
                       />
@@ -355,7 +410,7 @@
                   <div class="carousel-item">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership4.png"
+                        src="{{ asset('assets/images/content/Membership4.png') }}"
                         alt="Content 4"
                         class="card-img-top"
                       />
@@ -377,7 +432,7 @@
                   <div class="carousel-item">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership5.png"
+                        src="{{ asset('assets/images/content/Membership5.png') }}"
                         alt="Content 5"
                         class="card-img-top"
                       />
@@ -399,7 +454,7 @@
                   <div class="carousel-item">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/miko_radio.png"
+                        src="{{ asset('assets/images/content/miko_radio.png') }}"
                         alt="Content 6"
                         class="card-img-top"
                       />
@@ -445,7 +500,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership1.png"
+                        src="{{ asset('assets/images/content/Membership1.png') }}"
                         alt="Content 1"
                         class="card-img-top"
                       />
@@ -467,7 +522,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership2.png"
+                        src="{{ asset('assets/images/content/Membership2.png') }}"
                         alt="Content 1"
                         class="card-img-top"
                       />
@@ -489,7 +544,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership3.png"
+                        src="{{ asset('assets/images/content/Membership3.png') }}"
                         alt="Content 1"
                         class="card-img-top"
                       />
@@ -511,7 +566,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership4.png"
+                        src="{{ asset('assets/images/content/Membership4.png') }}"
                         alt="Content 1"
                         class="card-img-top"
                       />
@@ -533,7 +588,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/Membership5.png"
+                        src="{{ asset('assets/images/content/Membership5.png') }}"
                         alt="Content 1"
                         class="card-img-top"
                       />
@@ -555,7 +610,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-3 bg-body border-0">
                       <img
-                        src="assets/images/content/miko_radio.png"
+                        src="{{ asset('assets/images/content/miko_radio.png') }}"
                         alt="Content 1"
                         class="card-img-top"
                       />
@@ -721,7 +776,7 @@
                 target="_blank"
                 href="https://www.facebook.com/VtuberSubIndo"
                 ><img
-                  src="assets/images/icon/facebook.png"
+                  src="{{ asset('assets/images/icon/facebook.png') }}"
                   alt="Facebook Logo"
                   title="Facebook Fanpage"
                   width="50"
@@ -733,7 +788,7 @@
                 target="_blank"
                 href="https://instagram.com/vtubersubindo"
                 ><img
-                  src="assets/images/icon/instagram.png"
+                  src="{{ asset('assets/images/icon/instagram.png') }}"
                   alt="Instagram Logo"
                   title="Instagram"
                   width="50"
@@ -745,7 +800,7 @@
                 target="_blank"
                 href="https://youtube.com/c/VtuberSubIndo"
                 ><img
-                  src="assets/images/icon/youtube.png"
+                  src="{{ asset('assets/images/icon/youtube.png') }}"
                   alt="YouTube Logo"
                   title="YouTube"
                   width="50"
@@ -1289,7 +1344,7 @@
                       <div class="col-md-2">
                         <img
                           class="img-thumbnail rounded-circle"
-                          src="assets/images/icon/Sakura_Miko-35P_Emoji.png"
+                          src="{{ asset('assets/images/icon/Sakura_Miko-35P_Emoji.png') }}"
                           alt="35P Emoji"
                           width="200"
                           height="200"
@@ -1378,11 +1433,11 @@
     ></script>
 
     <!-- My JavaScript -->
-    <script type="text/javascript" src="assets/js/script.js"></script>
-    <script type="text/javascript" src="assets/js/swiper.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/swiper.js') }}"></script>
     <script
       type="text/javascript"
-      src="assets/js/dark-mode-switch.min.js"
+      src="{{ asset('assets/js/dark-mode-switch.min.js') }}"
     ></script>
   </body>
 </html>
