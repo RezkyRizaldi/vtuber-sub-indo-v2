@@ -39,9 +39,11 @@
         </p>
         <div
           class="embed-responsive embed-responsive-21by9 embed-responsive-16by9 embed-responsive-4by3 embed-responsive-1by1">
-          <iframe class="embed-responsive-item" src="https://discordapp.com/widget?id=715019741344825417&theme=dark"
-            width="400" height="500" allowtransparency="true" frameborder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <iframe class="embed-responsive-item discord"
+            src="https://discordapp.com/widget?id=715019741344825417&theme=dark" width="400" height="500"
+            allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+          </iframe>
         </div>
       </div>
       <div class="col-12 col-md-6">
@@ -68,7 +70,7 @@
 
 {{-- Gallery Section --}}
 <section data-anchor="gallery" id="gallery">
-  <div class="container pe-5 ps-5 pe-md-0 ps-md-0">
+  <div class="container pe-3 ps-3 pe-sm-5 ps-sm-5 pe-md-0 ps-md-0">
     <div class="row mb-5 text-center text-light">
       <div class="col">
         <h2 class="pt-3 pt-md-0">Gallery</h2>
@@ -301,7 +303,7 @@
     </div>
   </div>
   <div class="row mb-3 justify-content-center">
-    <div class="col-md-8 ps-5 pe-5">
+    <div class="col-10">
       <form action="" method="POST">
         @csrf
         <label for="name" class="form-label">Nama Lengkap</label>
@@ -321,26 +323,29 @@
         <div class="mb-3">
           <label for="message" class="form-label">Pesan</label>
           <textarea class="form-control" id="message" rows="3" placeholder="Tulis Pesan" data-bs-toggle="tooltip"
-            data-bs-placement="top" title="Harap diisi"></textarea>
+            data-bs-placement="top" title="Harap diisi">
+          </textarea>
         </div>
         <div class="mb-3">
           <div class="g-recaptcha" data-sitekey="6LfemLsZAAAAAIKitf7srENDko3KFbuEwMyw9_R2">
-            <div style="width: 304px; height: 78px">
+            <div class="captcha">
               <div>
                 <iframe
                   src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfemLsZAAAAAIKitf7srENDko3KFbuEwMyw9_R2&amp;co=aHR0cHM6Ly9oYXJ1bm96dWthLmlkOjQ0Mw..&amp;hl=en&amp;v=jxFQ7RQ9s9HTGKeWcoa6UQdD&amp;size=normal&amp;cb=hi6lmepctk7c"
                   width="304" height="78" role="presentation" name="a-fekub1qv2b0s" frameborder="0" scrolling="no"
-                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox">
+                </iframe>
               </div>
               <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="
-                    width: 250px;
-                    height: 40px;
-                    border: 1px solid rgb(193, 193, 193);
-                    margin: 10px 25px;
-                    padding: 0px;
-                    resize: none;
-                    display: none;
-                  "></textarea>
+                width: 250px;
+                height: 40px;
+                border: 1px solid rgb(193, 193, 193);
+                margin: 10px 25px;
+                padding: 0px;
+                resize: none;
+                display: none;
+              ">
+              </textarea>
             </div>
             <iframe style="display: none"></iframe>
           </div>

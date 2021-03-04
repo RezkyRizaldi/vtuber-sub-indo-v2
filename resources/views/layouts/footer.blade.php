@@ -16,8 +16,8 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row justify-content-center">
+      <div class="col-8 col-lg-12">
         <p>
           Copyright &copy;
           <script>
