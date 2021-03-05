@@ -28,7 +28,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav" style="flex-grow: 0">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto ps-2">
                     <li class="nav-item">
                         <a class="nav-link text-capitalize active" aria-current="page" title="Home" data-scroll="home"
                             href="#page">
