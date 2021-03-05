@@ -12,3 +12,8 @@
 */
 
 Route::get('/', 'YouTubeController@YouTubeAPI');
+Route::get('/{locale}/', function ($locale) {
+  $local = $locale;
+  App::setLocale($locale);
+  return view('index', compact('local'));
+});
