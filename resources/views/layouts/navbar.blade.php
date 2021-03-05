@@ -32,7 +32,7 @@
             <a class="nav-link" title="About" data-scroll="about" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" title="Gallery" data-scroll="gallery" href="#gallery">Gallery</a>
+            <a class="nav-link" title="Videos" data-scroll="videos" href="#videos">Videos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" title="Contact Us" data-scroll="contact" href="#contact">Contact</a>

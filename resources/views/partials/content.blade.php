@@ -12,7 +12,7 @@
     </path>
   </svg>
 </section>
-{{-- End Jumbotron --}}
+{{-- End Jumbotron --}}`
 
 {{-- About Section --}}
 <section data-anchor="about" id="about">
@@ -68,214 +68,25 @@
 </section>
 {{-- End About Section --}}
 
-{{-- Gallery Section --}}
-<section data-anchor="gallery" id="gallery">
+{{-- Videos Section --}}
+<section data-anchor="videos" id="videos">
   <div class="container pe-3 ps-3 pe-sm-5 ps-sm-5 pe-md-0 ps-md-0">
     <div class="row mb-5 text-center text-light">
       <div class="col">
-        <h2 class="pt-3 pt-md-0">Gallery</h2>
+        <h2 class="pt-3 pt-md-0">Videos</h2>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div id="contentCarousel" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership1.png') }}" alt="Content 1"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership2.png') }}" alt="Content 2"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership3.png') }}" alt="Content 3"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership4.png') }}" alt="Content 4"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership5.png') }}" alt="Content 5"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/miko_radio.png') }}" alt="Content 6"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button">
-            <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"
-              data-bs-target="#contentCarousel" data-bs-slide="prev"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button">
-            <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"
-              data-bs-target="#contentCarousel" data-bs-slide="next"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
       <div class="col-md-12 mt-5">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership1.png') }}" alt="Content 1"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
+            @foreach ($ListYoutube as $key => $item)
+              <div class="swiper-slide">
+                <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                  <iframe class="embed-item-responsive" src="https://www.youtube.com/embed/{{ $item['videoId']}}?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
                 </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership2.png') }}" alt="Content 1"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership3.png') }}" alt="Content 1"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership4.png') }}" alt="Content 1"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/Membership5.png') }}" alt="Content 1"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card rounded-3 bg-body border-0">
-                <img src="{{ asset('assets/images/content/miko_radio.png') }}" alt="Content 1"
-                  class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="card-title dark_state">Sakura Miko</h5>
-                  <p class="card-text dark_state text-truncate">
-                    The Elite Shrine Maiden from Hololive Production
-                  </p>
-                  <button class="btn text-light" data-bs-toggle="modal" data-bs-target="#myModal">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
           {{-- <div class="swiper-pagination"></div> --}}
 
@@ -293,7 +104,7 @@
     </path>
   </svg>
 </section>
-{{-- End Gallery Section --}}
+{{-- End Videos Section --}}
 
 {{-- Contact Us Section --}}
 <section data-anchor="contact" id="contact">

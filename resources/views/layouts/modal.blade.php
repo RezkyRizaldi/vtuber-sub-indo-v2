@@ -7,7 +7,7 @@
         <div class="modal-header">
           <h5 class="modal-title text-light" id="myModalLabel">Details</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
-            data-bs-target="gallery"></button>
+            data-bs-target="videos"></button>
         </div>
         <div class="modal-body">
           <div class="container-fluid">
@@ -435,7 +435,7 @@
             <a rel="noopener noreferrer" target="_blank" class="text-decoration-none"
               href="https://virtualyoutuber.fandom.com/wiki/Sakura_Miko" title="WikiFandom">WikiFandom</a>
           </small>
-          <button type="button" class="btn text-light" data-bs-dismiss="modal" data-bs-target="gallery">
+          <button type="button" class="btn text-light" data-bs-dismiss="modal" data-bs-target="videos">
             Gitu, ya.
           </button>
         </div>
