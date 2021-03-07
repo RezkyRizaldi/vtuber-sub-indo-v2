@@ -111,6 +111,14 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         {{-- @foreach ($ListYoutube as $key => $item) --}}
+                        {{-- <div class="swiper-slide">
+                            <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                                <iframe class="embed-item-responsive"
+                                    src="https://www.youtube.com/embed/{{ $item['videoId'] }}?rel=0"
+                                    title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                            </div>
+                        </div> --}}
+                        {{-- @endforeach --}}
                         <div class="swiper-slide">
                             <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
                                 <iframe class="embed-item-responsive"
@@ -146,7 +154,6 @@
                                     title="Sakura Miko Debut Video" allowfullscreen></iframe>
                             </div>
                         </div>
-                        {{-- @endforeach --}}
                     </div>
                     {{-- <div class="swiper-pagination"></div> --}}
 
@@ -185,7 +192,7 @@
                 @csrf
                 <label for="name" class="form-label">
                     @if (@$local)
-                        @lang('data.title.contact.form.name')
+                        @lang('data.title.contact.form.content.name')
                     @else
                         Nama Lengkap
                     @endif
@@ -194,11 +201,12 @@
                     <span class="input-group-text" id="name"><i class="bi bi-person-fill"></i></span>
                     <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Lengkap"
                         aria-label="name" aria-describedby="name" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Harap diisi" autocomplete="name" />
+                        title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}"
+                        autocomplete="name" />
                 </div>
                 <label for="email" class="form-label">
                     @if (@$local)
-                        @lang('data.title.contact.form.email')
+                        @lang('data.title.contact.form.content.email')
                     @else
                         Alamat Email
                     @endif
@@ -206,19 +214,21 @@
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="email"><i class="bi bi-envelope-fill"></i></span>
                     <input type="email" class="form-control" id="email" placeholder="Masukkan Email" aria-label="email"
-                        aria-describedby="email" data-bs-toggle="tooltip" data-bs-placement="top" title="Harap diisi"
+                        aria-describedby="email" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}"
                         autocomplete="email" />
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label text-capitalize">
                         @if (@$local)
-                            @lang('data.title.contact.form.message')
+                            @lang('data.title.contact.form.content.message')
                         @else
                             Pesan
                         @endif
                     </label>
                     <textarea class="form-control" id="message" rows="3" placeholder="Tulis Pesan"
-                        data-bs-toggle="tooltip" data-bs-placement="top" title="Harap diisi">
+                        data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}">
           </textarea>
                 </div>
                 <div class="mb-3">
@@ -247,9 +257,10 @@
                         <iframe style="display: none"></iframe>
                     </div>
                 </div>
-                <button type="submit" class="btn text-light" title="Send Message">
+                <button type="submit" class="btn text-light"
+                    title="{{ @$local ? __('data.title.contact.form.button.title') : 'Kirim Pesan' }}">
                     @if (@$local)
-                        @lang('data.title.contact.form.button')
+                        @lang('data.title.contact.form.button.content')
                     @else
                         Kirim
                     @endif

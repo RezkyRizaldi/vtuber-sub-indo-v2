@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::resource('affiliations', 'Api\VtuberController');
+Route::get('talents', 'Api\VtuberController@getTalent');
+Route::post('talents', 'Api\VtuberController@postTalent');
+Route::post('gens', 'Api\VtuberController@postGen');

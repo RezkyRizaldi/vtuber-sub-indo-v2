@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// API
+Route::get('/', 'Api\YouTubeController@YouTubeAPI');
 
-Route::get('/', 'YouTubeController@YouTubeAPI');
-Route::get('/{locale}/', function ($locale) {
-  $local = $locale;
-  App::setLocale($locale);
-  return view('index', compact('local'));
+Route::get('/virtualpedia', 'PagesController@virtualpedia')->name('virtualpedia');
+
+Route::group(['prefix' => '{locale}'], function() { 
+  Route::get('/virtualpedia', 'LocaleController@envirtualpedia')->name('ENVirtualpedia');
+  Route::get('/', 'LocaleController@home');
 });

@@ -118,16 +118,38 @@ body {
 }
 
 .jumbotron,
+#virtualpedia,
 #videos,
 .btn,
-footer,
 .modal-header {
     background-color: var(--primary-color, #3fc7f1);
+    -webkit-transition: background-color 0.7s;
+    -moz-transition: background-color 0.7s;
+    -ms-transition: background-color 0.7s;
+    -o-transition: background-color 0.7s;
+    transition: background-color 0.7s;
+}
+
+footer {
+    -webkit-transition: background-color 0.7s;
+    -moz-transition: background-color 0.7s;
+    -ms-transition: background-color 0.7s;
+    -o-transition: background-color 0.7s;
+    transition: background-color 0.7s;
+}
+
+.primary_blue {
+    background-color: var(--primary-color, #3fc7f1);
+}
+
+.primary_light {
+    background-color: var(--light-color, #fff);
 }
 
 .navbar,
 .jumbotron .display-4,
 .jumbotron .lead,
+#virtualpedia h2,
 #videos h2,
 footer p {
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.125);
@@ -143,10 +165,13 @@ footer p {
 
 .form-switch .form-check-input {
     cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+    margin-bottom: 11px;
 }
 
 .jumbotron,
 #about,
+#virtualpedia,
 #videos,
 #contact {
     position: relative;
@@ -158,13 +183,17 @@ footer p {
 
 .jumbotron .display-4,
 .jumbotron .lead,
-.jumbotron svg {
+.jumbotron svg,
+#virtualpedia .nav,
+#virtualpedia .card,
+#virtualpedia svg {
     position: relative;
     z-index: 1;
 }
 
 .jumbotron::after,
 #about::after,
+#virtualpedia::after,
 #videos::after,
 #contact::after {
     content: "";
@@ -185,6 +214,7 @@ footer p {
 }
 
 .jumbotron::after,
+#virtualpedia::after,
 #videos::after {
     border-top: 70px solid var(--light-color, #fff);
 }
@@ -252,6 +282,7 @@ footer p {
 
 .jumbotron::before,
 #about::before,
+#virtualpedia::before,
 #videos::before,
 #contact::before {
     content: "";
@@ -272,6 +303,7 @@ footer p {
 }
 
 .jumbotron::before,
+#virtualpedia::before,
 #videos::before {
     border-top: 70px solid var(--light-color, #fff);
 }
@@ -493,7 +525,7 @@ body.modal-open {
 }
 
 .center {
-    padding-left: 130px;
+    padding-left: 250px;
 }
 
 .captcha {
@@ -534,6 +566,8 @@ svg path.svg_blue {
     }
     .jumbotron::after,
     .jumbotron::before,
+    #virtualpedia::after,
+    #virtualpedia::before,
     #videos::after,
     #videos::before {
         border-left: 30px solid transparent;

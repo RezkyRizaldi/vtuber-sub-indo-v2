@@ -101,7 +101,7 @@ $(document).on("scroll", function() {
         $('section[data-anchor="videos"]').offset().top - 75
     ) {
         $(".navbar-nav li a").removeClass("active");
-        $(".navbar-nav li:eq(2) a").addClass("active");
+        $(".navbar-nav li:eq(3) a").addClass("active");
     }
 
     if (
@@ -109,7 +109,7 @@ $(document).on("scroll", function() {
         $('section[data-anchor="contact"]').offset().top - 75
     ) {
         $(".navbar-nav li a").removeClass("active");
-        $(".navbar-nav li:eq(3) a").addClass("active");
+        $(".navbar-nav li:eq(4) a").addClass("active");
     }
 });
 

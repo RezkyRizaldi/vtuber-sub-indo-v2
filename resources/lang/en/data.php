@@ -6,7 +6,8 @@
       'home' => 'Home',
       'about' => 'About',
       'videos' => 'Videos',
-      'contact' => 'Contact'
+      'contact' => 'Contact',
+      'virtualpedia' => 'Virtualpedia',
     ],
     'title' => [
       'about' => [
@@ -15,13 +16,20 @@
         'twitter' => 'Twitter Timeline',
       ],
       'videos' => 'Videos',
+      'virtualpedia' => 'Virtualpedia',
       'contact' => [
         'heading' => 'Contact Us',
         'form' => [
-          'name' => 'Full Name',
-          'email' => 'Email Address',
-          'message' => 'Message',
-          'button' => 'Send',
+          'content' => [
+            'name' => 'Full Name',
+            'email' => 'Email Address',
+            'message' => 'Message',
+          ],
+          'title' => 'Fill Required',
+          'button' => [
+            'content' => 'Send',
+            'title' => 'Send Message',
+          ],
         ],
       ],
     ],

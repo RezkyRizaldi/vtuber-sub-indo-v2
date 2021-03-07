@@ -16,7 +16,8 @@
 }
 
 [data-theme="dark"] .bg-light,
-[data-theme="dark"] .bg-white {
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] footer.primary_light {
     background-color: var(--dark-color, #000) !important;
 }
 
@@ -68,8 +69,9 @@
 
 [data-theme="dark"] .jumbotron,
 [data-theme="dark"] #videos,
+[data-theme="dark"] #virtualpedia,
 [data-theme="dark"] .btn,
-[data-theme="dark"] footer,
+[data-theme="dark"] footer.primary_blue,
 [data-theme="dark"] .modal-header {
     background-color: var(--secondary-color, #2e9fd1) !important;
     transition: background-color 0.7s;
@@ -87,7 +89,7 @@
 }
 
 [data-theme="dark"] .top {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] .top:focus,

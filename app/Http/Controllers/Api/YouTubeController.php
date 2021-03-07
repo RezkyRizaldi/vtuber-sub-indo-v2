@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class YouTubeController extends Controller
 {
@@ -23,6 +24,6 @@ class YouTubeController extends Controller
         //     $ListYoutube[$key] = $value['id'];
         //     $ListYoutube[$key] += $value['snippet'];
         // }
-        return view('index');
+        return view('home.index', compact('ListYoutube'));
     }
 }
