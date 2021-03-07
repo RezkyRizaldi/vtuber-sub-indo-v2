@@ -30,7 +30,19 @@
     "email": "rezkyrizaldi30@gmail.com",
     "url": "https://rezkyrizaldi.herokuapp.com/"
   },
-  "private": true,
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "qna": "marketplace",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie >= 8"
+  ],
+  "contributors": [
+    "Hadat hadatskywalker@gmail.com https://github.com/HadatMTCH",
+    "Dinar dinartrevor@gmail.com https://github.com/dinartrevor"
+  ],
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -58,6 +70,7 @@
     "vue": "^2.5.17"
   },
   "dependencies": {
+    "@prettier/plugin-php": "^0.16.1",
     "swiper": "^6.4.15"
   }
 }

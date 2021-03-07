@@ -6,30 +6,30 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateAffiliationsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('affiliations', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->text('image');
-            $table->text('desc');
-            $table->bigInteger('talent_id');
-            $table->timestamps();
-        });
-    }
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create("affiliations", function (Blueprint $table) {
+      $table->bigIncrements("id");
+      $table->string("name");
+      $table->text("image");
+      $table->text("desc");
+      $table->bigInteger("talent_id");
+      $table->timestamps();
+    });
+  }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('affiliations');
-    }
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists("affiliations");
+  }
 }

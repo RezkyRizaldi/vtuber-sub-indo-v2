@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title')
-    Vtuber Sub Indo
+  Vtuber Sub Indo
 @endsection
 @section('content')
-    @include('partials.home.content')
+  @include('partials.home.content')
 @endsection
