@@ -6,6 +6,7 @@ use App\Model\Affiliation;
 use App\Model\Talent;
 use App\Model\Gen;
 use App\Model\GenTalent;
+use App\Model\AffiliationTalent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -18,7 +19,15 @@ class VtuberController extends Controller
      */
     public function index()
     {
+        try {
+            $affiliations = Affiliation::with('AffiliationTalent')->get();
+            return response()->json(['status' => 'sukses', 'data' => $affiliations], 200);          
+        } catch (Exception $ex) {
+            return response()->json(['status' => 'error', 'result' => $ex->getMessage(),'message' => 'Data Tidak Ditemukan']);
+        }
         
+
+
     }
 
     /**
@@ -47,8 +56,16 @@ class VtuberController extends Controller
             $request->image->move($path, $filename);
             $data['image'] = $filename;
             $postData = Affiliation::create($data);
-
-            return response()->json(['status' => 'sukses', 'data' => $postData], 200);          
+            if(isset($postData['id'])){
+                if(isset($request->talent_id) && $request->talent_id){
+                    foreach ($data['talent_id'] as $key => $value) {
+                       $affiliationTalent =  AffiliationTalent::create(array('affiliation_id' => $postData['id'],
+                        'talent_id' => $value));
+                    }
+                }
+                return response()->json(['status' => 'sukses', 'data' => $postData, 'Affiliation' => $affiliationTalent], 200);          
+            }
+            
         } catch (Exception $ex) {
             return response()->json(['status' => 'error', 'result' => $ex->getMessage(),'message' => 'Data Tidak Ditemukan']);
         }
@@ -102,7 +119,12 @@ class VtuberController extends Controller
     }
 
     public function getTalent() {
-
+        try {
+            $genTalents = Gen::with('genTalent')->paginate(5);
+             return response()->json(['status'=> 'Sukses', 'data'=>$genTalents], 200);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
     public function postTalent(Request $request) {
