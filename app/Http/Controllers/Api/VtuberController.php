@@ -6,6 +6,7 @@ use App\Models\Affiliation;
 use App\Models\Talent;
 use App\Models\Gen;
 use App\Models\GenTalent;
+use App\Models\AffliationTalent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -139,8 +140,12 @@ class VtuberController extends Controller
           "talent_id" => $postData["id"],
           "gen_id" => $data["gen_id"],
         ]);
+        $aff = AffiliationTalent::create([
+          "talent_id" => $postData["id"],
+          "affiliation_id" => $data["affiliation_id"],
+        ]);
         return response()->json(
-          ["status" => "sukses", "data" => $postData, "gen" => $gen],
+          ["status" => "sukses", "data" => $postData, "gen" => $gen, "affiliation" => $aff],
           200
         );
       }

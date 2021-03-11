@@ -18,7 +18,6 @@ class CreateAffiliationsTable extends Migration
       $table->string("name");
       $table->text("image");
       $table->text("desc");
-      $table->bigInteger("talent_id");
       $table->timestamps();
     });
   }

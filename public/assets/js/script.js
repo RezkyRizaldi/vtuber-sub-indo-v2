@@ -54,7 +54,7 @@ $(document).on("scroll", function () {
       body.classList.remove("white");
     }
   } else {
-    if ((y >= 420 && y <= 1475) || (y >= 2175 && y <= 3050)) {
+    if ((y >= 420 && y <= 1475) || (y >= 2000 && y <= 2950)) {
       body.classList.add("white");
       body.classList.remove("blue");
     } else {
