@@ -2,6 +2,7 @@ const swiper = new Swiper(".swiper-container", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
+  initialSlide: 1,
   slidesPerView: "auto",
   loop: false,
   navigation: {

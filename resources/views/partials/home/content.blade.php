@@ -180,7 +180,25 @@
   </div>
   <div class="row mb-3 justify-content-center">
     <div class="col-10 col-lg-8">
-      <form action="" method="POST">
+      <div id="alertSuccess" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+        @if (@$local)
+          <strong>@lang('data.title.contact.form.alert.lead.success')</strong>
+          @lang('data.title.contact.form.alert.paragraph.success')
+        @else
+          <strong>Terima kasih!</strong> data Anda sudah berhasil terkirim.
+        @endif
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div id="alertFailed" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+        @if (@$local)
+          <strong>@lang('data.title.contact.form.alert.lead.failed')</strong>
+          @lang('data.title.contact.form.alert.paragraph.failed')
+        @else
+          <strong>Mohon maaf.</strong> data gagal terkirim.
+        @endif
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <form action="?" method="POST" name="form">
         @csrf
         <label for="name" class="form-label">
           @if (@$local)
@@ -191,9 +209,10 @@
         </label>
         <div class="input-group flex-nowrap mb-3">
           <span class="input-group-text" id="name"><i class="bi bi-person-fill"></i></span>
-          <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Lengkap" aria-label="name"
-            aria-describedby="name" data-bs-toggle="tooltip" data-bs-placement="top"
-            title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}" autocomplete="name" />
+          <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan Nama Lengkap"
+            aria-label="name" aria-describedby="name" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}" autocomplete="name" required
+            spellcheck />
         </div>
         <label for="email" class="form-label">
           @if (@$local)
@@ -204,9 +223,10 @@
         </label>
         <div class="input-group mb-3">
           <span class="input-group-text" id="email"><i class="bi bi-envelope-fill"></i></span>
-          <input type="email" class="form-control" id="email" placeholder="Masukkan Email" aria-label="email"
-            aria-describedby="email" data-bs-toggle="tooltip" data-bs-placement="top"
-            title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}" autocomplete="email" />
+          <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email"
+            aria-label="email" aria-describedby="email" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}" autocomplete="email" required
+            spellcheck />
         </div>
         <div class="mb-3">
           <label for="message" class="form-label text-capitalize">
@@ -216,13 +236,15 @@
               Pesan
             @endif
           </label>
-          <textarea class="form-control" id="message" rows="3" placeholder="Tulis Pesan" data-bs-toggle="tooltip"
-            data-bs-placement="top" title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}">
+          <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tulis Pesan"
+            data-bs-toggle="tooltip" data-bs-placement="top"
+            title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}" required spellcheck>
           </textarea>
         </div>
         <div class="mb-3">
-          <div class="g-recaptcha" data-sitekey="6LfemLsZAAAAAIKitf7srENDko3KFbuEwMyw9_R2">
-            <div class="captcha">
+          <div class="g-recaptcha" data-callback="recaptchaCallback"
+            data-sitekey="6LdDWnwaAAAAAOIkCFh7EDnYDgSAEEPheUpWJo7-">
+            {{-- <div class="captcha">
               <div>
                 <iframe
                   src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfemLsZAAAAAIKitf7srENDko3KFbuEwMyw9_R2&amp;co=aHR0cHM6Ly9oYXJ1bm96dWthLmlkOjQ0Mw..&amp;hl=en&amp;v=jxFQ7RQ9s9HTGKeWcoa6UQdD&amp;size=normal&amp;cb=hi6lmepctk7c"
@@ -240,15 +262,24 @@
                 display: none;">
               </textarea>
             </div>
-            <iframe style="display: none"></iframe>
+            <iframe style="display: none"></iframe> --}}
           </div>
         </div>
-        <button type="submit" class="btn text-light"
+        <button type="submit" id="btnSend" class="btn text-light"
           title="{{ @$local ? __('data.title.contact.form.button.title') : 'Kirim Pesan' }}">
           @if (@$local)
             @lang('data.title.contact.form.button.content')
           @else
             Kirim
+          @endif
+        </button>
+        <button id="btnLoad" class="btn text-light d-none" type="button" disabled
+          title="{{ @$local ? __('data.title.contact.form.button.loader') : 'Memuat...' }}">
+          <span class="spinner-border spinner-border-sm ml-2" role="status" aria-hidden="true"></span>
+          @if (@$local)
+            @lang('data.title.contact.form.button.loader')
+          @else
+            Memuat...
           @endif
         </button>
       </form>

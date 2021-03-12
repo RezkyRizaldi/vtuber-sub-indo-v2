@@ -6,7 +6,7 @@ use App\Models\Affiliation;
 use App\Models\Talent;
 use App\Models\Gen;
 use App\Models\GenTalent;
-use App\Models\AffiliationTalent;
+use App\Models\AffliationTalent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -133,39 +133,37 @@ class VtuberController extends Controller
    */
   public function postTalent(Request $request)
   {
-        try {
-        $data = $request->all();
-        $uniquename = "tlnt_" . md5($data["name"]);
-        $filename =$uniquename ."." .$request->file("image")->getClientOriginalExtension();
-        $path = public_path("storage/talent");
-        $request->image->move($path, $filename);
-        $data["image"] = $filename;
-        $postData = Talent::create($data);
-        if (isset($postData["id"])) {
-            $gen = GenTalent::create([
-                "talent_id" => $postData["id"],
-                "gen_id" => $data["gen_id"],
-            ]);
-            return response()->json(
-                ["status" => "sukses", "data" => $postData, "gen" => $gen],
-                200
-            );
-        }
-        } catch (Exception $ex) {
-            return response()->json([
-                "status" => "error",
-                "result" => $ex->getMessage(),
-                "message" => "Data Tidak Ditemukan",
-            ]);
-        }
-    }
-    public function getTalent() {
-        try {
-            $genTalents = Gen::with('genTalent')->paginate(5);
-             return response()->json(['status'=> 'Sukses', 'data'=>$genTalents], 200);
-        } catch (\Throwable $th) {
-            //throw $th;
-        }
+    try {
+      $data = $request->all();
+      $uniquename = "tlnt_" . md5($data["name"]);
+      $filename =
+        $uniquename .
+        "." .
+        $request->file("image")->getClientOriginalExtension();
+      $path = public_path("storage/talent");
+      $request->image->move($path, $filename);
+      $data["image"] = $filename;
+      $postData = Talent::create($data);
+      if (isset($postData["id"])) {
+        $gen = GenTalent::create([
+          "talent_id" => $postData["id"],
+          "gen_id" => $data["gen_id"],
+        ]);
+        $aff = AffiliationTalent::create([
+          "talent_id" => $postData["id"],
+          "affiliation_id" => $data["affiliation_id"],
+        ]);
+        return response()->json(
+          ["status" => "sukses", "data" => $postData, "gen" => $gen, "affiliation" => $aff],
+          200
+        );
+      }
+    } catch (Exception $ex) {
+      return response()->json([
+        "status" => "error",
+        "result" => $ex->getMessage(),
+        "message" => "Data Tidak Ditemukan",
+      ]);
     }
 
 

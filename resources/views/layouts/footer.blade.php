@@ -51,10 +51,11 @@
 
   {{-- Google --}}
   <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
-  <script type="text/javascript" async
+  {{-- <script type="text/javascript" async
     src="https://www.gstatic.com/recaptcha/releases/jxFQ7RQ9s9HTGKeWcoa6UQdD/recaptcha__en.js" crossorigin="anonymous"
     integrity="sha384-M9863pj8VTkCmdbfuuaGvQUaNXo72mc4KbfOtDfVBjv+zjrQy0vx5uzX9BsGSepE">
-  </script>
+  </script> --}}
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-174222113-1"></script>
 
   {{-- Bootstrap JavaScript --}}
@@ -67,6 +68,7 @@
 
   {{-- My JavaScript --}}
   <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('assets/js/form.js') }}"></script>
   <script type="text/javascript" src="{{ asset('assets/js/swiper.js') }}"></script>
   <script type="text/javascript" src="{{ asset('assets/js/dark-mode-switch.min.js') }}"></script>
 @endsection

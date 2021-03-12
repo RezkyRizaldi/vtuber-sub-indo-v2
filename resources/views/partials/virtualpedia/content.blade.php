@@ -10,11 +10,12 @@
             Virtualpedia
           @endif
         </h2>
+        <p class="fs-5">Cari tahu informasi seputar Oshi kalian!</p>
       </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-md-center">
       <div class="col">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active text-light" id="pills-hololive-tab" data-bs-toggle="pill"
               data-bs-target="#pills-hololive" type="button" role="tab" aria-controls="pills-hololive"
@@ -26,11 +27,15 @@
               aria-selected="false">Nijisanji</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link text-light" id="pills-indie-tab" data-bs-toggle="pill"
-              data-bs-target="#pills-indie" type="button" role="tab" aria-controls="pills-indie"
-              aria-selected="false">Indie</button>
+            <button class="nav-link text-light" id="pills-maha5-tab" data-bs-toggle="pill" data-bs-target="#pills-maha5"
+              type="button" role="tab" aria-controls="pills-maha5" aria-selected="false">MAHA5</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-light" id="pills-indie-tab" data-bs-toggle="pill" data-bs-target="#pills-indie"
+              type="button" role="tab" aria-controls="pills-indie" aria-selected="false">Indie</button>
           </li>
         </ul>
+        <hr class="mt-3 nav_divider" />
       </div>
     </div>
     <div class="tab-content" id="pills-tabContent">
@@ -39,21 +44,23 @@
           <div class="col-12">
             <div class="row justify-content-center">
               @foreach ($genTalent as $gen)
-                <h2 class="text-center text-light my-5">
-                  @if ($gen->id === 4 || $gen->id === 8)
+                <h2 class="text-center text-light text-capitalize my-5">
+                  @if ($gen->id === 4)
+                    {{ $gen->type }} {{ $gen->gen }}
+                  @elseif ($gen->id === 8)
                     {{ $gen->gen }}
                   @elseif ($gen->id === 9 || $gen->id === 10)
-                    Hololive ID Gen {{ $gen->gen }}
+                    {{ $gen->type }} ID Gen {{ $gen->gen }}
                   @elseif ($gen->id === 11)
-                    Hololive EN Gen {{ $gen->gen }}
+                    {{ $gen->type }} EN Gen {{ $gen->gen }}
                   @elseif ($gen->id === 12 || $gen->id === 13)
-                    Hololive CN Gen {{ $gen->gen }}
+                    {{ $gen->type }} CN Gen {{ $gen->gen }}
                   @elseif ($gen->id === 14 || $gen->id === 15 || $gen->id === 16)
-                    Holostars Gen {{ $gen->gen }}
+                    {{ $gen->type }} Gen {{ $gen->gen }}
                   @elseif ($gen->id === 17)
-                    Staff
+                    {{ $gen->type }}
                   @else
-                    Hololive Gen {{ $gen->gen }}
+                    {{ $gen->type }} Gen {{ $gen->gen }}
                   @endif
                 </h2>
                 <div class="col-md-12">
@@ -61,7 +68,7 @@
                     <div class="swiper-wrapper">
                       @foreach ($gen->genTalent as $talent)
                         <div class="swiper-slide">
-                          <div class="card">
+                          <div class="card h-100">
                             <img src="{{ asset('storage/talent/' . $talent->image) }}" class="card-img-top"
                               alt="Content 1">
                             <div class="card-body">
@@ -93,7 +100,34 @@
                 @foreach ($gen->genTalent as $talent)
                   <div class="col-3">
                     <div class="card" style="max-height: 550px">
-                      <img src="{{ asset('storage/talent/' . $talent->image) }}" class="card-img-top" alt="Content 1">
+                      <img src="{{ asset('storage/talent/' . $talent->image) }}" class="card-img-top"
+                        alt="Content 1">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ $talent->name }}</h5>
+                        <p class="card-text text-truncate">{{ $talent->desc }}</p>
+                        <a href="#" class="btn text-light">Lihat Selengkapnya</a>
+                      </div>
+                    </div>
+                  </div>
+                @endforeach
+              @endforeach
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-maha5" role="tabpanel" aria-labelledby="pills-maha5-tab">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              @foreach ($genTalent as $gen)
+                <div class="col-12">
+                  <p>{{ $gen->gen }}</p>
+                </div>
+                @foreach ($gen->genTalent as $talent)
+                  <div class="col-3">
+                    <div class="card" style="max-height: 550px">
+                      <img src="{{ asset('storage/talent/' . $talent->image) }}" class="card-img-top"
+                        alt="Content 1">
                       <div class="card-body">
                         <h5 class="card-title">{{ $talent->name }}</h5>
                         <p class="card-text text-truncate">{{ $talent->desc }}</p>
