@@ -19,6 +19,16 @@ return [
     "contact" => [
       "heading" => "Kontak Kami",
       "form" => [
+        "alert" => [
+          "lead" => [
+            "success" => "Terima kasih!",
+            "failed" => "Mohon maaf.",
+          ],
+          "paragraph" => [
+            "success" => "data Anda telah berhasil terkirim.",
+            "failed" => "data Anda gagal dikirimkan.",
+          ],
+        ],
         "content" => [
           "name" => "Nama Lengkap",
           "email" => "Alamat Email",
@@ -29,6 +39,7 @@ return [
       "button" => [
         "content" => "Kirim",
         "title" => "Kirim Pesan",
+        "loader" => "Memuat...",
       ],
     ],
   ],

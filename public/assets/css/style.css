@@ -564,6 +564,11 @@ body.modal-open {
   height: 78px;
 }
 
+.g-recaptcha {
+  width: 300px;
+  height: 75px;
+}
+
 svg path.svg_white,
 svg path.svg_blue {
   transition: fill 0.7s;

@@ -19,6 +19,16 @@ return [
     "contact" => [
       "heading" => "Contact Us",
       "form" => [
+        "alert" => [
+          "lead" => [
+            "success" => "Thank you!",
+            "failed" => "Sorry.",
+          ],
+          "paragraph" => [
+            "success" => "your data has been sent successfully.",
+            "failed" => "your data failed to send.",
+          ],
+        ],
         "content" => [
           "name" => "Full Name",
           "email" => "Email Address",
@@ -28,6 +38,7 @@ return [
         "button" => [
           "content" => "Send",
           "title" => "Send Message",
+          "loader" => "Loading...",
         ],
       ],
     ],
