@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::resource('affiliations', 'Api\VtuberController');
-Route::get('talents', 'Api\VtuberController@getTalent');
-Route::post('talents', 'Api\VtuberController@postTalent');
-Route::post('gens', 'Api\VtuberController@postGen');
+Route::resource("affiliations", "Api\VtuberController");
+Route::get("talents", "Api\VtuberController@getTalent");
+Route::post("talents", "Api\VtuberController@postTalent");
+Route::post("gens", "Api\VtuberController@postGen");
