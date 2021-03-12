@@ -13,10 +13,10 @@ class CreateAffiliationTalents extends Migration
    */
   public function up()
   {
-    Schema::create('affiliation_talent', function (Blueprint $table) {
-      $table->bigIncrements('id');
-      $table->bigInteger('affiliation_id');
-      $table->bigInteger('talent_id');
+    Schema::create("affiliation_talent", function (Blueprint $table) {
+      $table->bigIncrements("id");
+      $table->bigInteger("affiliation_id");
+      $table->bigInteger("talent_id");
       $table->timestamps();
     });
   }
@@ -28,6 +28,6 @@ class CreateAffiliationTalents extends Migration
    */
   public function down()
   {
-    Schema::dropIfExists('affiliation_talent');
+    Schema::dropIfExists("affiliation_talent");
   }
 }

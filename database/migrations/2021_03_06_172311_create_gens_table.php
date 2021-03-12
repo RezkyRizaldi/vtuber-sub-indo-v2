@@ -16,7 +16,16 @@ class CreateGensTable extends Migration
     Schema::create("gens", function (Blueprint $table) {
       $table->bigIncrements("id");
       $table->string("gen")->nullable();
-      $table->enum("type", ["hololive", "holostars", "staff", "Nijisanji", "VirtuaReal", "MAHA5"])->nullable();
+      $table
+        ->enum("type", [
+          "hololive",
+          "holostars",
+          "staff",
+          "Nijisanji",
+          "VirtuaReal",
+          "MAHA5",
+        ])
+        ->nullable();
       $table->string("branch")->nullable();
       $table->timestamps();
     });

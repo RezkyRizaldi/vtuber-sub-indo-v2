@@ -287,7 +287,7 @@ INSERT INTO `gen_talent` (`id`, `talent_id`, `gen_id`, `created_at`, `updated_at
 (64, 64, 17, '2021-03-06 12:35:52', '2021-03-06 12:35:52'),
 (65, 65, 17, '2021-03-06 12:37:52', '2021-03-06 12:37:52'),
 (66, 66, 17, '2021-03-06 12:39:58', '2021-03-06 12:39:58'),
-(69, 72, 18, '2021-03-11 06:13:47', '2021-03-11 06:13:47');
+(67, 67, 18, '2021-03-11 06:13:47', '2021-03-11 06:13:47');
 
 -- --------------------------------------------------------
 
@@ -411,7 +411,7 @@ INSERT INTO `talent` (`id`, `name`, `image`, `desc`, `created_at`, `updated_at`)
 (64, 'A-chan', 'tlnt_fa2d7ae99c685e966298ed0cad0e908e.png', 'VTuber office, person behind the scenes of Hololive (sometimes DJ).', '2021-03-06 12:35:52', '2021-03-06 12:35:52'),
 (65, 'Daidou Shinove', 'tlnt_04b1d27a44644dd90ece284d3ffa90ab.png', 'Cover Co., Ltd. Male VTuber group \"Holostars\" manager and collaboration window.', '2021-03-06 12:37:52', '2021-03-06 12:37:52'),
 (66, 'EnMa', 'tlnt_7a1dabd4d683b85f46f395ae8603a8cd.png', 'HoloEN\'s Manager. A necromancer from the Demonic-Realm Academy who is not good at communicating with people.', '2021-03-06 12:39:58', '2021-03-06 12:39:58'),
-(72, 'Tsukino Mito', 'tlnt_2490744f943df29762f70622fadd8408.png', 'Tsukino Mito (月ノ美兎) is a female Japanese Virtual YouTuber, a well-dressed and well-spoken 16-year-old high school \"iinchou\" (委員長, class president). She is a member of (and currently the most popular in number of subscribers) the Nijisanji group. She is in the \"JK gumi\" (high school girl gang) along with Shizuka Rin and Higuchi Kaede.', '2021-03-11 06:13:47', '2021-03-11 06:13:47');
+(67, 'Tsukino Mito', 'tlnt_2490744f943df29762f70622fadd8408.png', 'Tsukino Mito (月ノ美兎) is a female Japanese Virtual YouTuber, a well-dressed and well-spoken 16-year-old high school \"iinchou\" (委員長, class president). She is a member of (and currently the most popular in number of subscribers) the Nijisanji group. She is in the \"JK gumi\" (high school girl gang) along with Shizuka Rin and Higuchi Kaede.', '2021-03-11 06:13:47', '2021-03-11 06:13:47');
 
 -- --------------------------------------------------------
 
