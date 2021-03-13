@@ -6,7 +6,9 @@ use App\Models\Affiliation;
 use App\Models\Talent;
 use App\Models\Gen;
 use App\Models\GenTalent;
-use App\Models\AffliationTalent;
+use App\Models\AffliationGen;
+use App\Models\Group;
+use App\Models\Branch;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -21,9 +23,9 @@ class VtuberController extends Controller
   public function index()
   {
     try {
-      $affiliations = Affiliation::with("AffiliationTalent")->get();
+      $affiliationGen = Affiliation::with("affiliationGen.group.groupBranch","affiliationGen.genTalent")->get();
       return response()->json(
-        ["status" => "sukses", "data" => $affiliations],
+        ["status" => "sukses", "data" => $affiliationGen],
         200
       );
     } catch (Exception $ex) {
@@ -65,11 +67,11 @@ class VtuberController extends Controller
       $data["image"] = $filename;
       $postData = Affiliation::create($data);
       if (isset($postData["id"])) {
-        if (isset($request->talent_id) && $request->talent_id) {
-          foreach ($data["talent_id"] as $key => $value) {
-            $affiliationTalent = AffiliationTalent::create([
+        if (isset($request->gen_id) && $request->gen_id) {
+          foreach ($data["gen_id"] as $key => $value) {
+            $affiliationTalent = AffiliationGen::create([
               "affiliation_id" => $postData["id"],
-              "talent_id" => $value,
+              "gen_id" => $value,
             ]);
           }
         }
@@ -77,7 +79,7 @@ class VtuberController extends Controller
           [
             "status" => "sukses",
             "data" => $postData,
-            "Affiliation" => $affiliationTalent,
+            "Affiliation" => $affiliationGen,
           ],
           200
         );
@@ -137,12 +139,146 @@ class VtuberController extends Controller
   }
 
   /**
-   * Fetch Talents' Gen.
+   * Fetch talents' group data.
    *
    * @return \Illuminate\Http\Response
    */
+  public function getGroup()
+  {
+    try {
+      $groups = Group::with("groupBranch")->get();
+      return response()->json(["status" => "sukses", "data" => $groups], 200);
+    } catch (Exception $ex) {
+      return response()->json([
+        "status" => "error",
+        "result" => $ex->getMessage(),
+        "message" => "Data Tidak Ditemukan",
+      ]);
+    }
+  }
+
   /**
-   * Post Talent's data.
+   * Post talent's group data.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function postGroup(Request $request)
+  {
+    try {
+      $data = $request->all();
+      $postData = Group::create($data);
+      if (isset($postData["id"])) {
+        if (isset($request->branch_id) && $request->branch_id) {
+          foreach ($data["branch_id"] as $key => $value) {
+            $groupBranch = GroupBranch::create([
+              "group_id" => $postData["id"],
+              "branch_id" => $value,
+            ]);
+          }
+        }
+        return response()->json(
+          [
+            "status" => "sukses",
+            "data" => $postData,
+            "groups" => $groupBranch,
+          ],
+          200
+        );
+      }
+    } catch (Exception $ex) {
+      return response()->json([
+        "status" => "error",
+        "result" => $ex->getMessage(),
+        "message" => "Data Tidak Ditemukan",
+      ]);
+    }
+  }
+
+  /**
+   * Post talent's group branch data.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function postBranch(Request $request)
+  {
+    try {
+      $data = $request->all();
+      $postData = Branch::create($data);
+
+      return response()->json(["status" => "sukses", "data" => $postData], 200);
+    } catch (Exception $ex) {
+      return response()->json([
+        "status" => "error",
+        "result" => $ex->getMessage(),
+        "message" => "Data Tidak Ditemukan",
+      ]);
+    }
+  }
+
+  /**
+   * Fetch talents' gen data.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function getGen()
+  {
+    try {
+      $gens = Gen::all();
+      return response()->json(["status" => "sukses", "data" => $gens], 200);
+    } catch (Exception $ex) {
+      return response()->json([
+        "status" => "error",
+        "result" => $ex->getMessage(),
+        "message" => "Data Tidak Ditemukan",
+      ]);
+    }
+  }
+
+  /**
+   * Post talent's gen data.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function postGen(Request $request)
+  {
+    try {
+      $data = $request->all();
+      $postData = Gen::create($data);
+
+      return response()->json(["status" => "sukses", "data" => $postData], 200);
+    } catch (Exception $ex) {
+      return response()->json([
+        "status" => "error",
+        "result" => $ex->getMessage(),
+        "message" => "Data Tidak Ditemukan",
+      ]);
+    }
+  }
+
+  /**
+   * Fetch talents' data.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function getTalent()
+  {
+    try {
+      $genTalent = Gen::with("genTalent")->get();
+      return response()->json(["status" => "sukses", "data" => $genTalent], 200);
+    } catch (Exception $ex) {
+      return response()->json([
+        "status" => "error",
+        "result" => $ex->getMessage(),
+        "message" => "Data Tidak Ditemukan",
+      ]);
+    }
+  }
+
+  /**
+   * Post talent's data.
    *
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
@@ -161,35 +297,23 @@ class VtuberController extends Controller
       $data["image"] = $filename;
       $postData = Talent::create($data);
       if (isset($postData["id"])) {
-        $gen = GenTalent::create([
-          "talent_id" => $postData["id"],
-          "gen_id" => $data["gen_id"],
-        ]);
+        if (isset($request->gen_id) && $request->gen_id) {
+          foreach ($data["gen_id"] as $key => $value) {
+            $genTalent = GenTalent::create([
+              "talent_id" => $postData["id"],
+              "gen_id" => $value,
+            ]);
+          }
+        }
         return response()->json(
           [
             "status" => "sukses",
             "data" => $postData,
-            "gen" => $gen,
+            "gens" => $genTalent,
           ],
           200
         );
       }
-    } catch (Exception $ex) {
-      return response()->json([
-        "status" => "error",
-        "result" => $ex->getMessage(),
-        "message" => "Data Tidak Ditemukan",
-      ]);
-    }
-  }
-
-  public function postGen(Request $request)
-  {
-    try {
-      $data = $request->all();
-      $postData = Gen::create($data);
-
-      return response()->json(["status" => "sukses", "data" => $postData], 200);
     } catch (Exception $ex) {
       return response()->json([
         "status" => "error",

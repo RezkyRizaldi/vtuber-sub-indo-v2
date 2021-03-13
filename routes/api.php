@@ -18,6 +18,10 @@ use Illuminate\Http\Request;
 // });
 
 Route::resource("affiliations", "Api\VtuberController");
+Route::get("groups", "Api\VtuberController@getGroup");
+Route::post("groups", "Api\VtuberController@postGroup");
+Route::post("branches", "Api\VtuberController@postBranch");
+Route::get("gens", "Api\VtuberController@getGen");
+Route::post("gens", "Api\VtuberController@postGen");
 Route::get("talents", "Api\VtuberController@getTalent");
 Route::post("talents", "Api\VtuberController@postTalent");
-Route::post("gens", "Api\VtuberController@postGen");

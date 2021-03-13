@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Talent;
+use App\Models\Gen;
+use App\Models\Affiliation;
+use App\Models\Group;
+use App\Models\Branch;
 
 class LocaleController extends Controller
 {
@@ -15,6 +20,9 @@ class LocaleController extends Controller
 
   public function envirtualpedia($locale)
   {
-    return view("virtualpedia.index", compact("local"));
+    $affiliationGen = Affiliation::with("affiliationGen")->get();
+    $groupBranches = Group::with("groupBranch")->get();
+    $genTalent = Gen::with("genTalent","group.groupBranch")->get();
+    return view("virtualpedia.index", compact("local", "affiliationGen", "groupBranches", "genTalent"));
   }
 }

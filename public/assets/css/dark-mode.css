@@ -2,11 +2,11 @@
     --primary-color: #3fc7f1;
     --secondary-color: #2e9fd1;
     --light-color: #fff;
-    --dark-color: #000;
+    --dark-color: #191b24;
 }
 
 [data-theme="dark"] {
-    background-color: var(--dark-color, #000) !important;
+    background-color: var(--dark-color, #191b24) !important;
     color: var(--light-color, #fff);
     transition: all 0.7s;
     -webkit-transition: all 0.7s;
@@ -18,22 +18,24 @@
 [data-theme="dark"] .bg-light,
 [data-theme="dark"] .bg-white,
 [data-theme="dark"] footer.primary_light {
-    background-color: var(--dark-color, #000) !important;
+    background-color: var(--dark-color, #191b24) !important;
 }
 
 [data-theme="dark"] .bg-black,
 [data-theme="dark"] .btn:hover,
-[data-theme="dark"] .top:hover {
+[data-theme="dark"] .top:hover,
+[data-theme="dark"] .btn#btnSearch:hover {
     background-color: var(--light-color, #fff) !important;
 }
 
-[data-theme="dark"] .btn:hover {
+[data-theme="dark"] .btn:hover,
+[data-theme="dark"] .btn#btnSearch:hover {
     color: var(--secondary-color, #2e9fd1) !important;
 }
 
 [data-theme="dark"] .text-white,
 [data-theme="dark"] .dark_state {
-    color: var(--dark-color, #000) !important;
+    color: var(--dark-color, #191b24) !important;
 }
 
 [data-theme="dark"] .text-dark {
@@ -41,7 +43,7 @@
 }
 
 [data-theme="dark"] svg path.svg_white {
-    fill: var(--dark-color, #000) !important;
+    fill: var(--dark-color, #191b24) !important;
     transition: fill 0.7s;
     -webkit-transition: fill 0.7s;
     -moz-transition: fill 0.7s;
@@ -59,8 +61,8 @@
 }
 
 [data-theme="dark"] .form-check-input:checked {
-    background-color: var(--dark-color, #000) !important;
-    border-color: var(--dark-color, #000) !important;
+    background-color: var(--dark-color, #191b24) !important;
+    border-color: var(--dark-color, #191b24) !important;
 }
 
 [data-theme="dark"] .form-control:focus {
@@ -93,13 +95,23 @@
 }
 
 [data-theme="dark"] .top:focus,
-[data-theme="dark"] .top:active {
+[data-theme="dark"] .top:active,
+[data-theme="dark"] .btn#btnSearch {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
     background-color: var(--secondary-color, #2e9fd1) !important;
 }
 
 [data-theme="dark"] .top:focus i,
 [data-theme="dark"] .top:active i {
     color: var(--light-color, #fff) !important;
+}
+
+[data-theme="dark"] .virtualpedia_filter {
+    background-color: var(--primary-color, #3fc7f1);
 }
 
 @media only screen and (max-width: 767.98px) {

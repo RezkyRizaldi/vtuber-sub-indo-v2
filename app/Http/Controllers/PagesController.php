@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Talent;
 use App\Models\Gen;
+use App\Models\Affiliation;
+use App\Models\Group;
+use App\Models\Branch;
 
 class PagesController extends Controller
 {
@@ -15,8 +18,9 @@ class PagesController extends Controller
    */
   public function virtualpedia()
   {
-    $genTalent = Gen::with("genTalent")->get();
-    // dd($genTalent);
-    return view("virtualpedia.index", compact("genTalent"));
+    $affiliationGen = Affiliation::with("affiliationGen")->get();
+    $groupBranches = Group::with("groupBranch")->get();
+    $genTalent = Gen::with("genTalent","group.groupBranch")->get(); 
+    return view("virtualpedia.index", compact("affiliationGen", "groupBranches", "genTalent"));
   }
 }

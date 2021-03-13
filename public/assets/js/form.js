@@ -6,20 +6,22 @@ const alertFailed = document.getElementById("alertFailed");
 const btnSend = document.getElementById("btnSend");
 const btnLoad = document.getElementById("btnLoad");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  btnSend.classList.toggle("d-none");
-  btnLoad.classList.toggle("d-none");
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => {
-      btnLoad.classList.toggle("d-none");
-      btnSend.classList.toggle("d-none");
-      alertSuccess.classList.toggle("d-none");
-      form.reset();
-      console.log("Success!", response);
-    })
-    .catch((error) => {
-      alertFailed.classList.toggle("d-none");
-      console.error("Error!", error.message);
-    });
-});
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    btnSend.classList.toggle("d-none");
+    btnLoad.classList.toggle("d-none");
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => {
+        btnLoad.classList.toggle("d-none");
+        btnSend.classList.toggle("d-none");
+        alertSuccess.classList.toggle("d-none");
+        form.reset();
+        console.log("Success!", response);
+      })
+      .catch((error) => {
+        alertFailed.classList.toggle("d-none");
+        console.error("Error!", error.message);
+      });
+  });
+}

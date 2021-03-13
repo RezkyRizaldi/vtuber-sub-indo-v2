@@ -3,23 +3,23 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Talent;
-use App\Models\AffiliationTalent;
+use App\Models\Gen;
+use App\Models\AffiliationGen;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Affiliation extends Model
 {
   protected $fillable = ["name", "image", "desc"];
-  public function affiliationTalent(): BelongsToMany
+  public function affiliationGen(): BelongsToMany
   {
-    $pivotTable = AffiliationTalent::class;
-    $relatedModel = Talent::class;
+    $pivotTable = AffiliationGen::class;
+    $relatedModel = Gen::class;
 
     return $this->belongsToMany(
       $relatedModel,
       $pivotTable,
       "affiliation_id",
-      "talent_id"
+      "gen_id"
     );
   }
 }

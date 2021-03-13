@@ -2,7 +2,7 @@
     --primary-color: #3fc7f1;
     --secondary-color: #2e9fd1;
     --light-color: #fff;
-    --dark-color: #000;
+    --dark-color: #191b24;
 }
 
 body {
@@ -184,6 +184,7 @@ footer p {
 .jumbotron .display-4,
 .jumbotron .lead,
 .jumbotron svg,
+#videos .heading,
 #virtualpedia .nav,
 #virtualpedia .swiper-container,
 #virtualpedia svg {
@@ -427,7 +428,7 @@ textarea {
 }
 
 footer p span {
-    color: var(--dark-color, #000);
+    color: var(--dark-color, #191b24);
 }
 
 footer p span:hover {
@@ -480,11 +481,38 @@ footer p i {
     color: var(--primary-color, #3fc7f1) !important;
 }
 
+.btn#btnSubmit:hover,
+.btn#btnReq:hover {
+    background-color: transparent !important;
+    outline: none !important;
+    border: none !important;
+    color: var(--light-color, #fff) !important;
+}
+
 .nav-pills {
     overflow-x: auto;
     overflow-y: hidden;
     display: -webkit-box;
     display: -moz-box;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid var(--secondary-color, #2e9fd1);
+    width: 0;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -10px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
 }
 
 .nav-pills .nav-item .nav-link.active {
@@ -551,7 +579,7 @@ body.modal-open {
 }
 
 .center {
-    padding-left: 250px;
+    padding-left: 300px;
 }
 
 .captcha {
@@ -571,6 +599,14 @@ svg path.svg_blue {
     -moz-transition: fill 0.7s;
     -ms-transition: fill 0.7s;
     -o-transition: fill 0.7s;
+}
+
+.virtualpedia_filter {
+    background: var(--secondary-color, #2e9fd1);
+    width: 100%;
+    height: calc(100vh - 10rem);
+    padding: 1.2em;
+    top: 1em;
 }
 
 
@@ -657,6 +693,19 @@ svg path.svg_blue {
     .mobile_heading.events {
         width: 15%;
         padding: 0 0 0 7px;
+    }
+    .navbar-nav .nav-item .nav-link::after {
+        width: 0;
+        display: none;
+        border-bottom: none;
+    }
+    .navbar-nav .nav-item .nav-link:hover::after {
+        width: 0;
+        display: none;
+        border-bottom: none;
+    }
+    .virtualpedia_filter {
+        cursor: grab;
     }
 }
 

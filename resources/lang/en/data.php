@@ -4,9 +4,11 @@ return [
   "link" => [
     "home" => "Home",
     "about" => "About",
+    "virtualpedia" => "Virtualpedia",
     "videos" => "Videos",
     "contact" => "Contact",
-    "virtualpedia" => "Virtualpedia",
+    "profile" => "Username",
+    "sign_out" => "Sign Out",
   ],
   "title" => [
     "about" => [
@@ -14,8 +16,27 @@ return [
       "discord" => "Discord Server",
       "twitter" => "Twitter Timeline",
     ],
-    "videos" => "Videos",
-    "virtualpedia" => "Virtualpedia",
+    "videos" => [
+      "lead" => "Videos",
+      "button" => [
+        "lead" => "Want to be a part of us?",
+        "subLead" => "Join now!",
+        "submit" => "Submit Video",
+        "request" => "Request Video",
+      ],
+    ],
+    "virtualpedia" => [
+      "lead" => "Virtualpedia",
+      "paragraph" => "Let's find your Oshi's information!",
+      "sort" => [
+        "search" => [
+          "lead" => "Search your Vtuber",
+          "placeholder" => "Search here...",
+        ],
+        "filter" => "Filters",
+        "category" => "Categories",
+      ],
+    ],
     "contact" => [
       "heading" => "Contact Us",
       "form" => [

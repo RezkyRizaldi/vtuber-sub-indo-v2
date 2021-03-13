@@ -4,9 +4,11 @@ return [
   "link" => [
     "home" => "Beranda",
     "about" => "Tentang",
+    "virtualpedia" => "Virtualpedia",
     "videos" => "Clip",
     "contact" => "Kontak",
-    "virtualpedia" => "Virtualpedia",
+    "profile" => "Username",
+    "sign_out" => "Keluar",
   ],
   "title" => [
     "about" => [
@@ -14,8 +16,27 @@ return [
       "discord" => "Server Discord",
       "twitter" => "Linimasa Twitter",
     ],
-    "videos" => "Clip",
-    "virtualpedia" => "Virtualpedia",
+    "videos" => [
+      "lead" => "Clip",
+      "button" => [
+        "lead" => "Ingin menjadi bagian dari kami?",
+        "subLead" => "Daftar sekarang!",
+        "submit" => "Submit Clip",
+        "request" => "Request Clip",
+      ],
+    ],
+    "virtualpedia" => [
+      "lead" => "Virtualpedia",
+      "paragraph" => "Cari tahu seputar Oshi kalian!",
+      "sort" => [
+        "search" => [
+          "lead" => "Cari Vtuber kamu",
+          "placeholder" => "Cari di sini...",
+        ],
+        "filter" => "Filter",
+        "category" => "Kategori",
+      ],
+    ],
     "contact" => [
       "heading" => "Kontak Kami",
       "form" => [

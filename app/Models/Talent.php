@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Talent extends Model
 {
-  protected $fillable = ["name", "image", "desc"];
+  protected $fillable = ["name", "image", "desc", "status"];
 }
