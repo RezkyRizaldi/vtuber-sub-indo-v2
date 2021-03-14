@@ -3,7 +3,10 @@ const swiper = new Swiper(".swiper-container", {
     grabCursor: true,
     centeredSlides: true,
     initialSlide: 1,
+    observer: true,
+    observeParents: true,
     slidesPerView: "auto",
+    watchSlidesVisibility: true,
     loop: false,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -30,11 +33,11 @@ const swiper = new Swiper(".swiper-container", {
             loop: true,
         },
         640: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             loop: false,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             loop: false,
         },
         992: {
@@ -53,4 +56,13 @@ const swiper = new Swiper(".swiper-container", {
     // scrollbar: {
     //   el: ".swiper-scrollbar",
     // },
+    // on: {
+    //     activeIndexChange: function() {
+    //         if (this.realIndex == 0) {
+    //             $('#btnModal').removeClass('disabled');
+    //         } else {
+    //             $('#btnModal').addClass('disabled');
+    //         }
+    //     }
+    // }
 });

@@ -19,8 +19,11 @@ return [
     "videos" => [
       "lead" => "Clip",
       "button" => [
-        "lead" => "Ingin menjadi bagian dari kami?",
-        "subLead" => "Daftar sekarang!",
+        "leadStart" => "Ingin menjadi ",
+        "part" => "bagian",
+        "leadEnd" => " dari Kami?",
+        "join" => "Daftar",
+        "subLead" => " sekarang!",
         "submit" => "Submit Clip",
         "request" => "Request Clip",
       ],
@@ -56,6 +59,7 @@ return [
           "message" => "Pesan",
         ],
       ],
+      "helper" => "Pesan Anda harus mempunyai setidaknya 8-20 panjang karakter, dan tidak lebih dari 500 kata.",
       "title" => "Harap Diisi",
       "button" => [
         "content" => "Kirim",

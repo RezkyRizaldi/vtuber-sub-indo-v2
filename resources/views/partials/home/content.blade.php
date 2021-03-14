@@ -66,68 +66,89 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-6 text-center">
-              <h2 class="heading text-light mb-5">
+            <div class="col-12 col-lg-6 col-xl-4 text-center">
+              <h3 class="heading text-light mb-5">
                 @if (@$local)
-                  @lang('data.title.videos.button.lead')
+                  @lang('data.title.videos.button.leadStart')
                 @else
-                  Ingin menjadi bagian dari kami?
+                  Ingin menjadi 
                 @endif
-              <br />
+                <span class="text-success">
+                  @if (@$local)
+                    @lang('data.title.videos.button.part')
+                  @else
+                    bagian
+                  @endif
+                </span>
+                @if (@$local)
+                  @lang('data.title.videos.button.leadEnd')
+                @else
+                   dari Kami? 
+                @endif
+                <br />
+                <span class="text-primary">
+                  @if (@$local)
+                    @lang('data.title.videos.button.join')
+                  @else
+                    Daftar
+                  @endif
+                </span>
                 @if (@$local)
                   @lang('data.title.videos.button.subLead')
                 @else
-                  Daftar sekarang!
+                   sekarang!
                 @endif
-              </h2>
-              <button type="button" id="btnSubmit" class="btn btn-success bg-success me-3">
+              </h3>
+              <a href="{{ url('https://forms.gle/WaRgXpGJWihPxgWt7') }}" rel="noopener noreferrer" target="_blank" role="button" id="btnSubmit" class="btn btn-outline-success text-light me-3 mb-5 mb-lg-0">
                 @if (@$local)
                   @lang('data.title.videos.button.submit')
                 @else
                   Submit Clip
                 @endif
-              </button>
-              <button type="button" id="btnReq" class="btn btn-primary bg-primary">
+                <i class="bi bi-file-earmark-arrow-up-fill ps-1"></i>
+              </a>
+              <a href="{{ url('https://discord.gg/XPBxM3bUbb') }}" rel="noopener noreferrer" target="_blank" role="button" id="btnReq" class="btn btn-outline-primary text-light mb-5 mb-lg-0">
                 @if (@$local)
                   @lang('data.title.videos.button.request')
                 @else
                   Request Clip
                 @endif
-              </button>
+                <i class="bi bi-file-earmark-play-fill ps-1"></i>
+              </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-12 col-lg-6 col-xl-8">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         {{-- @foreach ($ListYoutube as $key => $item)
                         <div class="swiper-slide">
-                            <div class="ratio ratio-4x3 ratio-1x1">
-                                <iframe class="embed-item-responsive" src="https://www.youtube.com/embed/{{ $item['videoId'] }}?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                            <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                                <iframe src="https://www.youtube.com/embed/{{ $item['videoId'] }}?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
                             </div>
                         </div>
                         @endforeach --}}
                         <div class="swiper-slide">
-                            <div class="ratio ratio-4x3 ratio-1x1">
-                                <iframe class="embed-item-responsive" src="https://www.youtube.com/embed/dhJyQ97laCg?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                            <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                                <iframe src="https://www.youtube.com/embed/dhJyQ97laCg?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="ratio ratio-4x3 ratio-1x1">
-                                <iframe class="embed-item-responsive" src="https://www.youtube.com/embed/X9zw0QF12Kc?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                            <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                                <iframe src="https://www.youtube.com/embed/X9zw0QF12Kc?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="ratio ratio-4x3 ratio-1x1">
-                                <iframe class="embed-item-responsive" src="https://www.youtube.com/embed/Y8o4goeVM0o?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                            <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                                <iframe src="https://www.youtube.com/embed/Y8o4goeVM0o?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="ratio ratio-4x3 ratio-1x1">
-                                <iframe class="embed-item-responsive" src="https://www.youtube.com/embed/HiLnCY9qjSo?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                            <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                                <iframe src="https://www.youtube.com/embed/HiLnCY9qjSo?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="ratio ratio-4x3 ratio-1x1">
-                                <iframe class="embed-item-responsive" src="https://www.youtube.com/embed/uRB1G0cKpIk?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                            <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                                <iframe src="https://www.youtube.com/embed/uRB1G0cKpIk?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -207,7 +228,11 @@
                     <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tulis Pesan" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ @$local ? __('data.title.contact.form.title') : 'Harap Diisi' }}" required spellcheck>
           </textarea>
           <small id="messageHelp" class="form-text text-muted">
-                  Your message must be 8-20 characters long, and no more than 500 words.
+                  @if (@$local)
+                    @lang('data.title.contact.form.helper')
+                  @else
+                    Pesan Anda harus mempunyai setidaknya 8-20 panjang karakter, dan tidak lebih dari 500 kata.
+                  @endif
                 </small>
                 </div>
                 <div class="mb-3">

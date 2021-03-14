@@ -29,7 +29,7 @@
 }
 
 [data-theme="dark"] .btn:hover,
-[data-theme="dark"] .btn#btnSearch:hover {
+[data-theme="dark"] .btn#btnSearch:hover i {
     color: var(--secondary-color, #2e9fd1) !important;
 }
 
@@ -74,7 +74,8 @@
 [data-theme="dark"] #virtualpedia,
 [data-theme="dark"] .btn,
 [data-theme="dark"] footer.primary_blue,
-[data-theme="dark"] .modal-header {
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .btn#btnSearch {
     background-color: var(--secondary-color, #2e9fd1) !important;
     transition: background-color 0.7s;
     -webkit-transition: background-color 0.7s;
@@ -95,8 +96,7 @@
 }
 
 [data-theme="dark"] .top:focus,
-[data-theme="dark"] .top:active,
-[data-theme="dark"] .btn#btnSearch {
+[data-theme="dark"] .top:active {
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -110,8 +110,26 @@
     color: var(--light-color, #fff) !important;
 }
 
-[data-theme="dark"] .virtualpedia_filter {
+[data-theme="dark"] .virtualpedia_sorter,
+[data-theme="dark"] .nav-pills .nav-item .nav-link.active {
+    background-color: var(--primary-color, #3fc7f1) !important;
+}
+
+[data-theme="dark"] .btn#btnSearch:hover {
     background-color: var(--primary-color, #3fc7f1);
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background-color: #343a40 !important;
+}
+
+[data-theme="dark"] .dropdown-menu li:hover,
+[data-theme="dark"] .dropdown-menu li:hover .dropdown-item {
+    background-color: #acacac !important;
+}
+
+[data-theme="dark"] .dropdown-menu li .dropdown-item {
+    color: #dee2e6 !important;
 }
 
 @media only screen and (max-width: 767.98px) {

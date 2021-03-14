@@ -19,8 +19,11 @@ return [
     "videos" => [
       "lead" => "Videos",
       "button" => [
-        "lead" => "Want to be a part of us?",
-        "subLead" => "Join now!",
+        "leadStart" => "Want to be a ",
+        "part" => "part",
+        "leadEnd" => " of Us?",
+        "join" => "Let's join",
+        "subLead" => " now!",
         "submit" => "Submit Video",
         "request" => "Request Video",
       ],
@@ -55,6 +58,7 @@ return [
           "email" => "Email Address",
           "message" => "Message",
         ],
+        "helper" => "Your message must be 8-20 characters long, and no more than 500 words.",
         "title" => "Fill Required",
         "button" => [
           "content" => "Send",

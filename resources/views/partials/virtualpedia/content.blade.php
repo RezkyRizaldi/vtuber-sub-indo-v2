@@ -26,9 +26,10 @@
 						<ul class="nav nav-pills" id="pills-tab" role="tablist">
 							@foreach($affiliationGen as $key => $aff)
 								<li class="nav-item" role="presentation">
-									<button class="nav-link {{ $key == 0 ? 'active' : '' }} text-light" id="pills-{{ $aff->id }}-tab" data-bs-toggle="pill"
-										data-bs-target="#pills-{{ $aff->id }}" type="button" role="tab" aria-controls="pills-{{ $aff->id }}"
-										aria-selected="true">{{ $aff->name }}</button>
+									<button class="nav-link {{ $key == 0 ? 'active' : '' }} text-light" id="pills-{{ $aff->id }}-tab" data-bs-toggle="pill" data-bs-target="#pills-{{ $aff->id }}" type="button" role="tab" aria-controls="pills-{{ $aff->id }}" aria-selected="true">
+										{{ $aff->name }}
+										<img src="{{ asset('assets/images/content/affiliation/hololive_production_logogram.png') }}" alt="{{ $aff->name }}" width="20" height="20" />
+									</button>
 								</li>
 							@endforeach
 						</ul>
@@ -71,7 +72,7 @@
 															<div class="swiper-wrapper">
 																@foreach ($gen->genTalent as $talent)
 																	<div class="swiper-slide">
-																		<div class="card h-100">
+																		<div class="card rounded-3">
 																			<img src="{{ asset('storage/talent/' . $talent->image) }}" class="card-img-top"
 																				alt="Content 1">
 																			<div class="card-body">
@@ -85,7 +86,7 @@
 																				@endif
 																				</h5>
 																				<p class="card-text text-truncate dark_state">{{ $talent->desc }}</p>
-																				<a href="#" class="btn text-light">Lihat Selengkapnya</a>
+																				<button id="btnModal" data-bs-toggle="modal" data-bs-target="#myModal" class="btn text-light">Lihat Selengkapnya</button>
 																			</div>
 																		</div>
 																	</div>
@@ -104,8 +105,7 @@
 						</div>
 					</div>
 					<div class="col-12 col-md-4 col-xl-3 offset-0 offset-xl-1">
-						{{-- <h2 class="mb-5 text-center text-light">Hello, World!</h2> --}}
-						<div class="virtualpedia_sorter mb-5 mb-md-0 rounded-3 overflow-auto fw-bold position-sticky">
+						<div class="virtualpedia_sorter mb-5 mb-md-0 rounded-3 overflow-auto fw-bold position-sticky shadow">
 							<label for="search" class="form-label text-light fs-5">
 								@if (Request::is('en' . '/virtualpedia'))
 									@lang('data.title.virtualpedia.sort.search.lead')
@@ -114,8 +114,8 @@
 								@endif
 							</label>
 							<div class="input-group mb-3">
-								<input id="search" type="search" class="form-control" placeholder="Search here..." title="Search here..." aria-label="Cari disini" aria-describedby="btnSearch">
-								<button class="btn text-light" type="button" id="btnSearch">
+								<input id="search" type="search" class="form-control form_border" placeholder="Search here..." title="Search here..." aria-label="Search here..." aria-describedby="btnSearch">
+								<button class="btn text-light btn_border" type="button" id="btnSearch">
 									<i class="bi bi-search"></i>
 								</button>
 							</div>

@@ -103,7 +103,7 @@
             <a class="text-light dropdown-toggle"
               href="{{ url('/') }}" data-bs-toggle="dropdown" data-bs-display="static" role="button" aria-expanded="false">
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end">
+            <ul class="dropdown-menu dropdown-menu-lg-end">
               <li><h6 class="dropdown-header">Signed in as username</h6></li>
               <li><a class="dropdown-item" href="{{ url('/') }}" title="{{ @$local ? __('data.link.profile') : 'Username' }}">Profile</a></li>
               <li><a class="dropdown-item" href="{{ url('/') }}" title="{{ @$local ? __('data.link.profile') : 'Username' }}">Another action</a></li>

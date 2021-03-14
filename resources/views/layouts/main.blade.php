@@ -11,9 +11,10 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   {{-- Primary --}}
-  <meta name="title" content="{{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }}" />
-  <meta name="description"
+  <meta itemprop="title" content="{{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }}" />
+  <meta itemprop="description"
     content="Vtuber Sub Indo adalah sebuah komunitas Clipper yang mewadahi para Clipper Vtuber. Tujuan dari Vtuber Sub Indo yaitu menjadi garda terdepan Channel Clip Vtuber ber-subtitle Indonesia untuk menarik para penonton masuk ke lubang hitam yang sama seperti kita saat ini." />
+  <meta itemprop="image" content="{{ asset('assets/images/brand.jpg') }}" />
   <meta name="copyright" content="Muhamad Rezky Rizaldi" />
   <meta name="language" content="en" />
   <meta name="robots" content="index, follow" />
@@ -68,7 +69,10 @@
   <meta name="viewport" content="width=device-width" />
   <meta name="viewport" content="initial-scale=1.0" />
   <meta name="viewport" content="initial-scale=2.3, user-scalable=no" /> --}}
-  <link rel="apple-touch-icon" href="favicon.ico" type="image/x-icon" />
+  <link href="{{ asset('assets/images/icon/icon.png') }}" rel="apple-touch-icon" sizes="60x60">
+  <link href="{{ asset('assets/images/icon/icon.png') }}" rel="apple-touch-icon" sizes="76x76">
+  <link href="{{ asset('assets/images/icon/icon.png') }}" rel="apple-touch-icon" sizes="120x120">
+  <link href="{{ asset('assets/images/icon/icon.png') }}" rel="apple-touch-icon" sizes="152x152">
 
   {{-- IE --}}
   <meta http-equiv="Page-Enter" content="RevealTrans(Duration=2.0, Transition=2)" />
