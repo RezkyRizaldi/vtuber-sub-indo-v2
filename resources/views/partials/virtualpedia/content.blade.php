@@ -28,7 +28,8 @@
                 <li class="nav-item" role="presentation">
                   <button class="nav-link {{ $key == 0 ? 'active' : '' }} text-light"
                     id="pills-{{ $aff->id }}-tab" data-bs-toggle="pill" data-bs-target="#pills-{{ $aff->id }}"
-                    type="button" role="tab" aria-controls="pills-{{ $aff->id }}" aria-selected="true">
+                    type="button" role="tab" aria-controls="pills-{{ $aff->id }}" aria-selected="true"
+                    onclick="affiliationGen({{ $aff->id }})">
                     {{ $aff->name }}
                     <img src="{{ asset('assets/images/content/affiliation/hololive_production_logogram.png') }}"
                       alt="{{ $aff->name }}" width="20" height="20" />
@@ -44,72 +45,79 @@
                   <div class="row mb-5">
                     <div class="col-12">
                       <div class="row justify-content-center">
-                        @foreach ($aff->affiliationGen as $gen)
-                          <h2 class="text-center text-light text-capitalize my-5">
-                            @php
-                              $genGroup = $gen->group;
-                            @endphp
-                            @if ($gen->id === 4 || $gen->id === 24)
-                              {{ $gen->group->name }} {{ $gen->gen }}
-                            @elseif ($gen->id === 8 || ($gen->id >= 19 && $gen->id <= 21)) {{ $gen->gen }}
-                              @elseif ($gen->id === 9 || $gen->id === 10 || ($gen->id >= 25 && $gen->id <= 29))
-                                  {{ $gen->group->name }} {{ $genGroup->groupBranch[1]->code }} Gen
-                                {{ $gen->gen }} @elseif ($gen->id === 11)
-                                  {{ $gen->group->name }} {{ $genGroup->groupBranch[2]->code }} Gen
-                                  {{ $gen->gen }}
-                                @elseif ($gen->id === 12 || $gen->id === 13)
-                                  {{ $gen->group->name }} {{ $genGroup->groupBranch[3]->code }} Gen
-                                  {{ $gen->gen }}
-                                @elseif (($gen->id >= 14 && $gen->id <= 16) || ($gen->id >= 37 && strlen($gen->id) ))
-                                    {{ $gen->group->name }} Gen {{ $gen->gen }}
-                                  @elseif ($gen->id === 17 || $gen->id === 18 || $gen->id === 22 || $gen->id === 23)
-                                    {{ $gen->group->name }} {{ $genGroup->groupBranch->first()->code }} Wave
+                        <div id="load_{{ $aff->id }}">
+                          <input type="hidden" id="aff" value="{{ $aff->id }}">
+                          @foreach ($aff->affiliationGen as $gen)
+                            <h2 class="text-center text-light text-capitalize my-5">
+                              @php
+                                $genGroup = $gen->group;
+                              @endphp
+                              @if ($gen->id === 4 || $gen->id === 24)
+                                {{ $gen->group->name }} {{ $gen->gen }}
+                              @elseif ($gen->id === 8 || ($gen->id >= 19 && $gen->id <= 21)) {{ $gen->gen }}
+                                @elseif ($gen->
+                                  id === 9 || $gen->id === 10 || ($gen->id >= 25 && $gen->id <= 29))
+                                    {{ $gen->group->name }} {{ $genGroup->groupBranch[1]->code }} Gen
+                                  {{ $gen->gen }} @elseif ($gen->id === 11)
+                                    {{ $gen->group->name }} {{ $genGroup->groupBranch[2]->code }} Gen
                                     {{ $gen->gen }}
-                                  @elseif ($gen->id === 30)
-                                    {{ $gen->group->name }} {{ $genGroup->groupBranch[2]->code }}
-                                  @elseif ($gen->id >= 31 && $gen->id <= 35) {{ $gen->group->name }}
-                                    {{ $genGroup->groupBranch[3]->code }} Gen {{ $gen->gen }} @else
-                                      {{ $gen->group->name }} {{ $genGroup->groupBranch->first()->code }} Gen
-                                      {{ $gen->gen }} @endif
-                          </h2>
-                          <div class="col-md-12">
-                            <div class="swiper-container">
-                              <div class="swiper-wrapper">
-                                @foreach ($gen->genTalent as $talent)
-                                  <div class="swiper-slide">
-                                    <div class="card rounded-3">
-                                      <img src="{{ asset('storage/talent/' . $talent->image) }}" class="card-img-top"
-                                        alt="Content 1">
-                                      <div class="card-body">
-                                        <h5 class="card-title dark_state">
-                                          @if ($talent->status === 1)
-                                            {{ $talent->name }} <span class="text-muted"
-                                              style="font-size: 1rem">(Suspended)</span>
-                                          @elseif ($talent->status === 2)
-                                            {{ $talent->name }} <span class="text-muted"
-                                              style="font-size: 1rem">(Retired)</span>
-                                          @else
-                                            {{ $talent->name }}
-                                          @endif
-                                        </h5>
-                                        <p class="card-text text-truncate dark_state">{{ $talent->desc }}</p>
-                                        <button id="btnModal" data-bs-toggle="modal" data-bs-target="#myModal"
-                                          class="btn text-light">Lihat Selengkapnya</button>
+                                  @elseif ($gen->id === 12 || $gen->id === 13)
+                                    {{ $gen->group->name }} {{ $genGroup->groupBranch[3]->code }} Gen
+                                    {{ $gen->gen }}
+                                  @elseif (($gen->id >= 14 && $gen->id <= 16) || ($gen->id >= 37 && strlen($gen->id)
+                                      ))
+                                      {{ $gen->group->name }} Gen {{ $gen->gen }}
+                                    @elseif ($gen->id === 17 || $gen->id === 18 || $gen->id === 22 || $gen->id === 23)
+                                      {{ $gen->group->name }} {{ $genGroup->groupBranch->first()->code }} Wave
+                                      {{ $gen->gen }}
+                                    @elseif ($gen->id === 30)
+                                      {{ $gen->group->name }} {{ $genGroup->groupBranch[2]->code }}
+                                    @elseif ($gen->id >= 31 && $gen->id <= 35) {{ $gen->group->name }}
+                                      {{ $genGroup->groupBranch[3]->code }} Gen {{ $gen->gen }} @else
+                                        {{ $gen->group->name }} {{ $genGroup->groupBranch->first()->code }} Gen
+                                        {{ $gen->gen }} @endif
+                            </h2>
+                            <div class="col-md-12">
+                              <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                  @foreach ($gen->genTalent as $talent)
+                                    <div class="swiper-slide">
+                                      <div class="card rounded-3">
+                                        <img src="{{ asset('storage/talent/' . $talent->image) }}"
+                                          class="card-img-top" alt="Content 1">
+                                        <div class="card-body">
+                                          <h5 class="card-title dark_state">
+                                            @if ($talent->status === 1)
+                                              {{ $talent->name }} <span class="text-muted"
+                                                style="font-size: 1rem">(Suspended)</span>
+                                            @elseif ($talent->status === 2)
+                                              {{ $talent->name }} <span class="text-muted"
+                                                style="font-size: 1rem">(Retired)</span>
+                                            @else
+                                              {{ $talent->name }}
+                                            @endif
+                                          </h5>
+                                          <p class="card-text text-truncate dark_state">{{ $talent->desc }}</p>
+                                          <button id="btnModal" data-bs-toggle="modal" data-bs-target="#myModal"
+                                            class="btn text-light">Lihat Selengkapnya</button>
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                @endforeach
+                                  @endforeach
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                               </div>
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
                             </div>
-                          </div>
-                        @endforeach
+                          @endforeach
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               @endforeach
+              <button id="loadMore" class="btn text-light">Load More</button>
+              <button id="showLess" class="btn text-light d-none">Show Less</button>
             </div>
           </div>
           <div class="col-12 col-md-4 col-xl-3 offset-0 offset-xl-1">
@@ -185,4 +193,3 @@
     </path>
   </svg>
 </section>
-{{-- End About Section --}}

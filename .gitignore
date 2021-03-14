@@ -12,7 +12,7 @@ yarn-error.log
 # Folders to ignore
 /node_modules
 /public/hot
-# /public/storage
+/public/storage
 /storage/*.key
 /vendor
 
