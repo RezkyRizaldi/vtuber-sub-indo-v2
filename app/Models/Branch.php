@@ -9,8 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Branch extends Model
 {
-    protected $fillable = ["name", "code"];
-    public function branchGroup(): BelongsToMany
+  protected $fillable = ["name", "code"];
+
+  public function branchGroup(): BelongsToMany
   {
     $pivotTable = GroupBranch::class;
     $relatedModel = Group::class;

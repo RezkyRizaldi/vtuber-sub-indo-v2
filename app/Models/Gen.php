@@ -25,7 +25,7 @@ class Gen extends Model
     );
   }
 
-  public function group(){ 
-    return $this->belongsTo(Group::class)->groupby('name');        
+  public function group(){
+    return $this->belongsTo(Group::class)->groupby('name');
   }
 }

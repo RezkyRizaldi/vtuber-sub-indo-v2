@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Affiliation extends Model
 {
   protected $fillable = ["name", "image", "desc"];
+
   public function affiliationGen(): BelongsToMany
   {
     $pivotTable = AffiliationGen::class;

@@ -20,7 +20,7 @@ class PagesController extends Controller
   {
     $affiliationGen = Affiliation::with("affiliationGen")->get();
     $groupBranches = Group::with("groupBranch")->get();
-    $genTalent = Gen::with("genTalent","group.groupBranch")->get(); 
+    $genTalent = Gen::with("genTalent","group.groupBranch")->get();
     return view("virtualpedia.index", compact("affiliationGen", "groupBranches", "genTalent"));
   }
 }
