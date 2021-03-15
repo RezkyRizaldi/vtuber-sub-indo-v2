@@ -85,6 +85,7 @@
                                       <div class="card rounded-3">
                                         <img loading="lazy" src="{{ asset('storage/talent/' . $talent->image) }}"
                                           class="card-img-top" alt="Content 1">
+                                          <div class="swiper-lazy-preloader"></div>
                                         <div class="card-body">
                                           <h5 class="card-title dark_state">
                                             @if ($talent->status === 1)
