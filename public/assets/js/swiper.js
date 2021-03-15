@@ -1,5 +1,7 @@
 const swiper = new Swiper(".swiper-container", {
   effect: "coverflow",
+  preloadImages: false,
+  lazy: true,
   grabCursor: true,
   centeredSlides: true,
   initialSlide: 1,
