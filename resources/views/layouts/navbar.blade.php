@@ -16,13 +16,13 @@
       </div>
       <a class="navbar-brand d-none d-xl-block d-xxl-block m-auto center" href="{{ url('/') }}"
         title="{{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }}">
-        <img src="{{ asset('assets/images/icon/icon.png') }}"
+        <img loading="lazy" src="{{ asset('assets/images/icon/icon.png') }}"
           alt="{{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }} Logo" width="30" />
         {{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }}
       </a>
       <a class="navbar-brand d-block d-xl-none d-xxl-none pe-5 pe-lg-0 order-lg-1" href="{{ url('/') }}"
         title="{{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }}">
-        <img src="{{ asset('assets/images/icon/icon.png') }}"
+        <img loading="lazy" src="{{ asset('assets/images/icon/icon.png') }}"
           alt="{{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }} Logo" width="30" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -88,14 +88,14 @@
           </li>
           <li class="nav-item d-none d-lg-block d-xl-block d-xxl-block">
             <a title="{{ @$local ? __('data.link.profile') : 'Username' }}" href="{{ url('/') }}">
-              <img src="{{ asset('assets/images/default_pfp.png') }}" class="mt-1 ms-1 rounded-circle img-thumbnail"
+              <img loading="lazy" src="{{ asset('assets/images/default_pfp.png') }}" class="mt-1 ms-1 rounded-circle img-thumbnail"
                 alt="Username" width="30" height="30" />
             </a>
           </li>
           <li class="nav-item d-block d-lg-none d-xl-none d-xxl-none">
             <a class="nav-link text-decoration-none" title="{{ @$local ? __('data.link.profile') : 'Username' }}"
               href="{{ url('/') }}">
-              <img src="{{ asset('assets/images/default_pfp.png') }}" class="me-1 rounded-circle img-thumbnail"
+              <img loading="lazy" src="{{ asset('assets/images/default_pfp.png') }}" class="me-1 rounded-circle img-thumbnail"
                 alt="Username" width="30" height="30" />
               Username
             </a>

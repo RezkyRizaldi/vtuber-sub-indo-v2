@@ -6,15 +6,15 @@
       <div class="col-md-8">
         <div class="d-flex justify-content-evenly">
           <a class="social" rel="noopener noreferrer" target="_blank" href="{{ url('https://www.facebook.com/VtuberSubIndo') }}">
-            <img src="{{ asset('assets/images/icon/facebook.png') }}" alt="Facebook Logo" title="Facebook Fanpage"
+            <img loading="lazy" src="{{ asset('assets/images/icon/facebook.png') }}" alt="Facebook Logo" title="Facebook Fanpage"
               width="50" height="50" />
           </a>
           <a class="social" rel="noopener noreferrer" target="_blank" href="{{ url('https://instagram.com/vtubersubindo') }}">
-            <img src="{{ asset('assets/images/icon/instagram.png') }}" alt="Instagram Logo" title="Instagram" width="50"
+            <img loading="lazy" src="{{ asset('assets/images/icon/instagram.png') }}" alt="Instagram Logo" title="Instagram" width="50"
               height="50" />
           </a>
           <a class="social" rel="noopener noreferrer" target="_blank" href="{{ url('https://youtube.com/c/VtuberSubIndo') }}">
-            <img src="{{ asset('assets/images/icon/youtube.png') }}" alt="YouTube Logo" title="YouTube" width="50"
+            <img loading="lazy" src="{{ asset('assets/images/icon/youtube.png') }}" alt="YouTube Logo" title="YouTube" width="50"
               height="50" />
           </a>
         </div>

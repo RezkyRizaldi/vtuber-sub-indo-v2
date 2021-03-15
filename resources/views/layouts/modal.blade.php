@@ -421,7 +421,7 @@
                     </p>
                   </div>
                   <div class="col-md-2">
-                    <img class="img-thumbnail rounded-circle"
+                    <img loading="lazy" class="img-thumbnail rounded-circle"
                       src="{{ asset('assets/images/icon/Sakura_Miko-35P_Emoji.png') }}" alt="35P Emoji" width="200"
                       height="200" />
                   </div>

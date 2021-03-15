@@ -1,6 +1,6 @@
 {{-- Jumbotron --}}
 <section data-anchor="home" class="jumbotron text-center text-light">
-  <img src="{{ asset('assets/images/icon/icon.png') }}"
+  <img loading="lazy" src="{{ asset('assets/images/icon/icon.png') }}"
     alt="{{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }} Logo" width="200" class="mb-3" />
   <h1 class="display-4 text-capitalize">{{ str_replace('_', ' ', config('app.name', 'Vtuber Sub Indo')) }}</h1>
   <p class="lead text-capitalize">
@@ -34,7 +34,7 @@
       </div>
       <div class="col-12 col-md-6">
         <p class="align-middle mb-3">
-          <img src="{{ asset('assets/images/icon/discord.png') }}" alt="Discord Logo" width="50" height="50" />
+          <img loading="lazy" src="{{ asset('assets/images/icon/discord.png') }}" alt="Discord Logo" width="50" height="50" />
         @if (@$local) @lang('data.title.about.discord') @else Server Discord
           @endif
         </p>
@@ -49,7 +49,7 @@
       </div>
       <div class="col-12 col-md-6">
         <p class="align-middle mb-3 pt-3 pt-md-0">
-          <img src="{{ asset('assets/images/icon/twitter.png') }}" alt="Twitter Logo" width="50" height="50" />
+          <img loading="lazy" src="{{ asset('assets/images/icon/twitter.png') }}" alt="Twitter Logo" width="50" height="50" />
         @if (@$local) @lang('data.title.about.twitter') @else Linimasa Twitter
           @endif
         </p>

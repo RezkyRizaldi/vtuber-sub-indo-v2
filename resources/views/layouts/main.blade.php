@@ -92,15 +92,21 @@
   <link rel="author" href="https://rezkyrizaldi.herokuapp.com" />
 
   {{-- Bootstrap CSS --}}
+  <link rel="preload" as="" href="{{ asset('assets/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css') }}" />
 
   {{-- Bootstrap Icons --}}
+  <link rel="preload" as="style" href="{{ asset('assets/bootstrap-icons-1.4.0/bootstrap-icons.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/bootstrap-icons-1.4.0/bootstrap-icons.css') }}" />
 
   {{-- Swiper CSS --}}
+  <link rel="preload" as="style" href="{{ asset('assets/css/swiper-bundle.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}" />
 
   {{-- My CSS --}}
+  <link rel="preload" as="style" href="{{ asset('assets/css/style.css') }}" />
+  <link rel="preload" as="style" href="{{ asset('assets/css/dark-mode.css') }}" />
+  <link rel="preload" as="style" href="{{ asset('assets/css/swiper.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/dark-mode.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/swiper.css') }}" />

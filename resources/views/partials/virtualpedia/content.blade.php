@@ -31,7 +31,7 @@
                     type="button" role="tab" aria-controls="pills-{{ $aff->id }}" aria-selected="true"
                     onclick="affiliationGen({{ $aff->id }})">
                     {{ $aff->name }}
-                    <img src="{{ asset('assets/images/content/affiliation/hololive_production_logogram.png') }}"
+                    <img loading="lazy" src="{{ asset('assets/images/content/affiliation/hololive_production_logogram.png') }}"
                       alt="{{ $aff->name }}" width="20" height="20" />
                   </button>
                 </li>
@@ -83,7 +83,7 @@
                                   @foreach ($gen->genTalent as $talent)
                                     <div class="swiper-slide">
                                       <div class="card rounded-3">
-                                        <img src="{{ asset('storage/talent/' . $talent->image) }}"
+                                        <img loading="lazy" src="{{ asset('storage/talent/' . $talent->image) }}"
                                           class="card-img-top" alt="Content 1">
                                         <div class="card-body">
                                           <h5 class="card-title dark_state">
