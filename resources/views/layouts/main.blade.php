@@ -69,10 +69,25 @@
   <meta name="viewport" content="width=device-width" />
   <meta name="viewport" content="initial-scale=1.0" />
   <meta name="viewport" content="initial-scale=2.3, user-scalable=no" /> --}}
-  <link href="{{ asset('assets/images/icon/icon.png') }}" rel="apple-touch-icon" sizes="60x60">
-  <link href="{{ asset('assets/images/icon/icon.png') }}" rel="apple-touch-icon" sizes="76x76">
-  <link href="{{ asset('assets/images/icon/icon.png') }}" rel="apple-touch-icon" sizes="120x120">
-  <link href="{{ asset('assets/images/icon/icon.png') }}" rel="apple-touch-icon" sizes="152x152">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ asset('assets/images/icon/apple-touch-icon-57x57.png') }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('assets/images/icon/apple-touch-icon-114x114.png') }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('assets/images/icon/apple-touch-icon-72x72.png') }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('assets/images/icon/apple-touch-icon-144x144.png') }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ asset('assets/images/icon/apple-touch-icon-60x60.png') }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset('assets/images/icon/apple-touch-icon-120x120.png') }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ asset('assets/images/icon/apple-touch-icon-76x76.png') }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset('assets/images/icon/apple-touch-icon-152x152.png') }}" />
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/icon/favicon-196x196.png') }}" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/icon/favicon-96x96.png') }}" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/icon/favicon-32x32.png') }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/icon/favicon-16x16.png') }}" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ asset('assets/images/icon/favicon-128.png') }}" sizes="128x128" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="{{ asset('assets/images/icon/mstile-144x144.png') }}" />
+  <meta name="msapplication-square70x70logo" content="{{ asset('assets/images/icon/mstile-70x70.png') }}" />
+  <meta name="msapplication-square150x150logo" content="{{ asset('assets/images/icon/mstile-150x150.png') }}" />
+  <meta name="msapplication-wide310x150logo" content="{{ asset('assets/images/icon/mstile-310x150.png') }}" />
+  <meta name="msapplication-square310x310logo" content="{{ asset('assets/images/icon/mstile-310x310.png') }}" />
 
   {{-- IE --}}
   <meta http-equiv="Page-Enter" content="RevealTrans(Duration=2.0, Transition=2)" />
@@ -92,21 +107,21 @@
   <link rel="author" href="https://rezkyrizaldi.herokuapp.com" />
 
   {{-- Bootstrap CSS --}}
-  <link rel="preload" as="" href="{{ asset('assets/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css') }}" />
+  {{-- <link rel="preload" as="style" href="{{ asset('assets/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css') }}" /> --}}
+  <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css') }}" />
 
   {{-- Bootstrap Icons --}}
-  <link rel="preload" as="style" href="{{ asset('assets/bootstrap-icons-1.4.0/bootstrap-icons.css') }}" />
+  {{-- <link rel="preload" as="style" href="{{ asset('assets/bootstrap-icons-1.4.0/bootstrap-icons.css') }}" /> --}}
   <link rel="stylesheet" href="{{ asset('assets/bootstrap-icons-1.4.0/bootstrap-icons.css') }}" />
 
   {{-- Swiper CSS --}}
-  <link rel="preload" as="style" href="{{ asset('assets/css/swiper-bundle.min.css') }}" />
+  {{-- <link rel="preload" as="style" href="{{ asset('assets/css/swiper-bundle.min.css') }}" /> --}}
   <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}" />
 
   {{-- My CSS --}}
-  <link rel="preload" as="style" href="{{ asset('assets/css/style.css') }}" />
-  <link rel="preload" as="style" href="{{ asset('assets/css/dark-mode.css') }}" />
-  <link rel="preload" as="style" href="{{ asset('assets/css/swiper.css') }}" />
+  {{-- <link rel="preload" as="style" href="{{ asset('assets/css/style.css') }}" /> --}}
+  {{-- <link rel="preload" as="style" href="{{ asset('assets/css/dark-mode.css') }}" /> --}}
+  {{-- <link rel="preload" as="style" href="{{ asset('assets/css/swiper.css') }}" /> --}}
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/dark-mode.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/swiper.css') }}" />
@@ -131,11 +146,11 @@
       @include('layouts.footer')
     @show
 
-    @section('modal')
-      @parent
-      @include('layouts.modal')
-    @show
   </div>
+  @section('modal')
+    @parent
+    @include('layouts.modal')
+  @show
   {{-- End Page --}}
 </body>
 

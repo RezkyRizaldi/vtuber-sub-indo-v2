@@ -31,7 +31,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav" style="flex-grow: 0">
         <ul class="navbar-nav ms-auto ps-2 pe-lg-5 pe-xl-0">
-          <li class="nav-item">
+          <li class="nav-item" data-ripple>
             <a class="nav-link text-capitalize {{ Request::is('/') || Request::is(@$local) ? 'active' : '' }}"
               aria-current="page" title="{{ @$local ? __('data.link.home') : 'Beranda' }}" data-scroll="home"
               href="{{ Request::is(@$local) || Request::is('virtualpedia') || Request::is('en' . '/virtualpedia') ? url('/') : '#page' }}">
@@ -42,7 +42,7 @@
               @endif
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-ripple>
             <a class="nav-link text-capitalize" title="{{ @$local ? __('data.link.about') : 'Tentang' }}"
               data-scroll="about"
               href="{{ Request::is(@$local) || Request::is('virtualpedia') || Request::is('en' . '/virtualpedia') ? url('/') : '#about' }}">
@@ -53,7 +53,7 @@
               @endif
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-ripple>
             <a class="nav-link text-capitalize {{ Request::is(@$local) || Request::is('virtualpedia') || Request::is('en' . '/virtualpedia') ? 'active' : '' }}"
               title="Virtualpedia" data-scroll="virtualpedia"
               href="{{ Request::is(@$local) || Request::is('en' . '/virtualpedia') ? url('en' . '/virtualpedia') : route('virtualpedia') }}">
@@ -64,7 +64,7 @@
               @endif
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-ripple>
             <a class="nav-link text-capitalize" title="{{ @$local ? __('data.link.videos') : 'Clip' }}"
               data-scroll="videos"
               href="{{ Request::is(@$local) || Request::is('virtualpedia') || Request::is('en' . '/virtualpedia') ? url('/') : '#videos' }}">
@@ -75,7 +75,7 @@
               @endif
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-ripple>
             <a class="nav-link text-capitalize" title="{{ @$local ? __('data.link.profile') : 'Kontak' }}"
               data-scroll="contact"
               href="{{ Request::is(@$local) || Request::is('virtualpedia') || Request::is('en' . '/virtualpedia') ? url('/') : '#contact' }}">

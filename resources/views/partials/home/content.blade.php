@@ -12,7 +12,9 @@
     </path>
   </svg>
 </section>
-{{-- End Jumbotron --}} {{-- About Section --}}
+{{-- End Jumbotron --}}
+
+{{-- About Section --}}
 <section data-anchor="about" id="about">
   <div class="container">
     <div class="row mb-3 text-center">
@@ -69,7 +71,9 @@
     </path>
   </svg>
 </section>
-{{-- End About Section --}} {{-- Videos Section --}}
+{{-- End About Section --}}
+
+{{-- Videos Section --}}
 <section data-anchor="videos" id="videos">
   <div class="container pe-3 ps-3 pe-sm-5 ps-sm-5 pe-md-0 ps-md-0">
     <div class="row mb-5 text-center text-light">
@@ -114,7 +118,7 @@
           @endif
         </h3>
         <a href="{{ url('https://forms.gle/WaRgXpGJWihPxgWt7') }}" rel="noopener noreferrer" target="_blank"
-          role="button" id="btnSubmit" class="btn btn-outline-success text-light me-3 mb-5 mb-lg-0">
+          role="button" id="btnSubmit" class="btn btn-outline-success text-light me-3 mb-5 mb-lg-0" data-ripple="rgba(0,0,0, 0.3)">
           @if (@$local)
             @lang('data.title.videos.button.submit')
           @else
@@ -123,7 +127,7 @@
           <i class="bi bi-file-earmark-arrow-up-fill ps-1"></i>
         </a>
         <a href="{{ url('https://discord.gg/XPBxM3bUbb') }}" rel="noopener noreferrer" target="_blank" role="button"
-          id="btnReq" class="btn btn-outline-primary text-light mb-5 mb-lg-0">
+          id="btnReq" class="btn btn-outline-primary text-light mb-5 mb-lg-0" data-ripple="rgba(0,0,0, 0.3)">
           @if (@$local)
             @lang('data.title.videos.button.request')
           @else
@@ -136,12 +140,12 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             {{-- @foreach ($ListYoutube as $key => $item)
-                        <div class="swiper-slide">
-                            <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
-                                <iframe src="https://www.youtube.com/embed/{{ $item['videoId'] }}?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        @endforeach --}}
+              <div class="swiper-slide">
+                <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
+                  <iframe src="https://www.youtube.com/embed/{{ $item['videoId'] }}?rel=0" title="Sakura Miko Debut Video" allowfullscreen></iframe>
+                </div>
+              </div>
+            @endforeach --}}
             <div class="swiper-slide">
               <div class="ratio ratio-16x9 ratio-4x3 ratio-1x1">
                 <iframe src="https://www.youtube.com/embed/dhJyQ97laCg?rel=0" title="Sakura Miko Debut Video"
@@ -187,7 +191,9 @@
     </path>
   </svg>
 </section>
-{{-- End Videos Section --}} {{-- Contact Us Section --}}
+{{-- End Videos Section --}}
+
+{{-- Contact Us Section --}}
 <section data-anchor="contact" id="contact">
   <div class="row mb-5 text-center">
     <div class="col">

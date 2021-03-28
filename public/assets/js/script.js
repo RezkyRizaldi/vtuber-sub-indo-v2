@@ -124,41 +124,31 @@ $(document).on("scroll", function () {
 });
 
 $(window).on("load", function () {
-  affId = $("#aff").val();
-  console.log(affId);
-  size = $("#load_" + affId + " .col-md-12").length;
-  console.log(size);
-  x = 3;
-  $("#load_" + affId + " .col-md-12:lt(" + x + ")").show();
-  $("#load_" + affId + " .col-md-12")
-    .not(":lt(" + x + ")")
-    .hide();
-  if (size < x) {
+  let affId = $("#aff").val();
+  let columnSize = $(`#load_${affId} .col-md-12`).length;
+  let x = 3;
+  $(`#load_${affId} .col-md-12:lt("${x}")`).show();
+  $(`#load_${affId} .col-md-12`).not(`:lt("${x}")`).hide();
+  if (columnSize < x) {
     $("#loadMore").hide();
-  } else {
-    $("#loadMore").show();
-  }
-  if (size < x) {
     $("#showLess").hide();
   } else {
+    $("#loadMore").show();
     $("#showLess").show();
   }
   $("#loadMore").on("click", function () {
-    x = x + 3 <= size ? x + 3 : size;
-    $("#load_" + affId + " .col-md-12:lt(" + x + ")").show();
-    $("#showLess").toggleClass("d-none");
-    if (x == size) {
+    x = x + 3 <= columnSize ? x + 3 : columnSize;
+    $(`#load_${affId} .col-md-12:lt(${x})`).show();
+    if (x == columnSize) {
       $("#loadMore").hide();
+      $("#showLess").show();
     }
   });
   $("#showLess").on("click", function () {
     x = x - 3 < 0 ? 3 : x - 3;
-    $("#load_" + affId + " .col-md-12")
-      .not(":lt(" + x + ")")
-      .hide();
-    $("#loadMore").show();
-    $("#showLess").show();
+    $(`#load_${affId} .col-md-12`).not(`:lt("${x}")`).hide();
     if (x == 3) {
+      $("#loadMore").show();
       $("#showLess").hide();
     }
   });
@@ -166,7 +156,6 @@ $(window).on("load", function () {
 
 function affiliationGen(id) {
   let columnSize = $(`#load_${id} .col-md-12`).length;
-  console.log(columnSize);
   let x = 3;
   $(`#load_${id} .col-md-12:lt(${x})`).show();
   $(`#load_${id} .col-md-12`).not(`:lt(${x})`).hide();
@@ -176,28 +165,67 @@ function affiliationGen(id) {
     $("#showLess").hide();
   } else {
     $("#loadMore").show();
-    $("#showLess").hide();
+    $("#showLess").show();
   }
 
   $("#loadMore").on("click", function () {
     x = x + 3 <= columnSize ? x + 3 : columnSize;
     $(`#load_${id} .col-md-12:lt(${x})`).show();
-    $("#showLess").toggleClass("d-none");
     if (x == columnSize) {
       $("#loadMore").hide();
+      $("#showLess").show();
     }
   });
 
   $("#showLess").on("click", function () {
     x = x - 3 < 0 ? 3 : x - 3;
     $(`#load_${id} .col-md-12`).not(`:lt(${x})`).hide();
-    $("#loadMore").show();
-    $("#showLess").show();
     if (x !== columnSize) {
+      $("#loadMore").show();
       $("#showLess").hide();
     }
   });
 }
+
+$(function () {
+  $(document).on("mousedown", "[data-ripple]", function (e) {
+    let $self = $(this);
+    if ($self.is(".btn-disabled")) {
+      return;
+    }
+    if ($self.closest("[data-ripple]")) {
+      e.stopPropagation();
+    }
+
+    let initPos = $self.css("position"),
+      offs = $self.offset(),
+      x = e.pageX - offs.left,
+      y = e.pageY - offs.right,
+      dia = Math.min(this.offsetHeight, this.offsetWidth, 100),
+      $ripple = $("<div/>", { class: "ripple", appendTo: $self });
+
+    if (!initPos || initPos === "static") {
+      $self.css({ position: "relative" });
+    }
+
+    $("<div/>", {
+      class: "ripple_wave",
+      css: {
+        background: $self.data("ripple"),
+        width: dia,
+        height: dia,
+        left: x - dia / 2,
+        top: y - dia / 2,
+      },
+      appendTo: $ripple,
+      one: {
+        animationEnd: function () {
+          $ripple.remove();
+        },
+      },
+    });
+  });
+});
 
 window.dataLayer = window.dataLayer || [];
 
