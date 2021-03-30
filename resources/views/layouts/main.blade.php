@@ -111,8 +111,8 @@
   <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css') }}" />
 
   {{-- Bootstrap Icons --}}
-  {{-- <link rel="preload" as="style" href="{{ asset('assets/bootstrap-icons-1.4.0/bootstrap-icons.css') }}" /> --}}
-  <link rel="stylesheet" href="{{ asset('assets/bootstrap-icons-1.4.0/bootstrap-icons.css') }}" />
+  {{-- <link rel="preload" as="style" href="{{ asset('assets/bootstrap-icons-1.4.1/bootstrap-icons.css') }}" /> --}}
+  <link rel="stylesheet" href="{{ asset('assets/bootstrap-icons-1.4.1/bootstrap-icons.css') }}" />
 
   {{-- Swiper CSS --}}
   {{-- <link rel="preload" as="style" href="{{ asset('assets/css/swiper-bundle.min.css') }}" /> --}}

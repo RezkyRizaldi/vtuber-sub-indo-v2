@@ -55,7 +55,7 @@
   <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=UA-174222113-1"></script>
 
   {{-- Bootstrap JavaScript --}}
-  <script type="text/javascript" src="{{ asset('assets/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('assets/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js') }}"></script>
 
   {{-- Swiper JavaScript --}}
   <script type="text/javascript" src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
